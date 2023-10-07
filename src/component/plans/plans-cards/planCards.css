@@ -1,0 +1,165 @@
+.plan-card {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 40px 0px;
+    position: relative;
+}
+
+.plan-card .plan-frame {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 0px 20px 0px 0px;
+    position: relative;
+    width: 421px;
+}
+
+.plan-card .plan-div-wrapper {
+    align-items: center;
+    background-color: #f7f5f2;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px 32px;
+    position: relative;
+}
+
+.plan-card .plan-text-wrapper {
+    
+    font-family: "FreightBigProBook-Regular-☞", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+.plan-card .plan-div {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    position: relative;
+}
+
+.plan-card .plan-star {
+    height: 60px;
+    position: relative;
+    width: 60px;
+}
+
+.plan-card .plan-img {
+    height: 23px;
+    left: 18px;
+    position: absolute;
+    top: 18px;
+    width: 23px;
+}
+
+.plan-card .plan-frame-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 151px;
+    position: relative;
+}
+
+.plan-card .plan-frame-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 34px;
+    position: relative;
+}
+
+.plan-card .plan-p {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-LightLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    opacity: 0.5;
+    position: relative;
+    width: 341px;
+}
+
+.plan-card .plan-frame-4 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+.plan-card .each-magazine {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+
+
+.plan-card .plan-frame-5 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.plan-card .plan-frame-6 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+}
+
+.plan-card .check-circle {
+    height: 30px;
+    position: relative;
+    width: 30px;
+}
+
+.plan-card .plan-text-wrapper-2 {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0.8;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.plan-card .button-secondary-instance {
+    border-color: var(--isabeline) !important;
+    flex: 0 0 auto !important;
+    width: 357px !important;
+}
+
+.plan-card .design-component-instance-node {
+    color: var(--isabeline) !important;
+}

@@ -2,6 +2,12 @@
 {
     margin-top: 10rem !important;
 }
+.plan-cards-flex
+{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
 
 @media screen and (max-width: 550px)
 {
