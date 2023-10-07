@@ -1,0 +1,12 @@
+.plan-corporate
+{
+    margin-top: 10rem !important;
+}
+
+@media screen and (max-width: 550px)
+{
+    .plan-corporate
+{
+    margin-top: 7rem !important;
+}
+}
