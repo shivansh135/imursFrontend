@@ -5,8 +5,9 @@ import "./home.css";
 import { InfiniteMarquee } from "../marquee/marquee"
 import { FlipbookContainer } from "../flipBookShow/flipBookShow";
 import {VideoBackground} from "../displayVideo/video";
-import { Feedback } from "../feedback/card";
 import { PartnerInvite } from "../partnerInvite/partnerInvite";
+import Courosal from "../feedback/courosal/courosal";
+
 
 
 
@@ -27,11 +28,14 @@ export const Home = () => {
         <div style={{ marginTop: "40px" }} />
         <InfiniteMarquee />
         <div style={{ marginTop: "40px" }} />
-        <Feedback/>
+          <Courosal/>
+       
+        
         <div style={{ marginTop: "40px" }} />  
         <PartnerInvite/>
         <div style={{ marginTop: "40px" }} />
-      
+        
+        
         </>
     );
 };

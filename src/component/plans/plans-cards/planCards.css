@@ -1,23 +1,28 @@
-.plan-card {
+.price-card {
     align-items: center;
+    background-color: #3c3c3c;
     display: inline-flex;
     flex-direction: column;
     gap: 22px;
+    height: 757px;
     padding: 40px 0px;
     position: relative;
+    width: 440px;
+    margin-top: 60px;
 }
 
-.plan-card .plan-frame {
+.price-card .head {
     align-items: center;
+    align-self: stretch;
     display: flex;
     flex: 0 0 auto;
     justify-content: space-between;
     padding: 0px 20px 0px 0px;
     position: relative;
-    width: 421px;
+    width: 100%;
 }
 
-.plan-card .plan-div-wrapper {
+.price-card .title {
     align-items: center;
     background-color: #f7f5f2;
     display: inline-flex;
@@ -28,8 +33,8 @@
     position: relative;
 }
 
-.plan-card .plan-text-wrapper {
-    
+.price-card .head .text-wrapper {
+    color: #333332;
     font-family: "FreightBigProBook-Regular-☞", Helvetica;
     font-size: 32px;
     font-weight: 400;
@@ -41,7 +46,7 @@
     width: fit-content;
 }
 
-.plan-card .plan-div {
+.price-card .icon {
     align-items: flex-start;
     display: inline-flex;
     flex: 0 0 auto;
@@ -49,39 +54,38 @@
     position: relative;
 }
 
-.plan-card .plan-star {
+.price-card .star {
     height: 60px;
     position: relative;
     width: 60px;
 }
 
-.plan-card .plan-img {
-    height: 23px;
-    left: 18px;
-    position: absolute;
-    top: 18px;
-    width: 23px;
-}
 
-.plan-card .plan-frame-2 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
+.price-card .cont {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
     flex-direction: column;
-    gap: 151px;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0px 40px;
     position: relative;
+    width: 100%;
 }
 
-.plan-card .plan-frame-3 {
+.price-card .text-wrap {
     align-items: flex-start;
-    display: inline-flex;
+    align-self: stretch;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 34px;
     position: relative;
+    width: 100%;
 }
 
-.plan-card .plan-p {
+.price-card .discription {
+    align-self: stretch;
     color: var(--isabeline);
     font-family: "HK Grotesk-LightLegacy", Helvetica;
     font-size: 20px;
@@ -91,43 +95,36 @@
     margin-top: -1px;
     opacity: 0.5;
     position: relative;
-    width: 341px;
 }
 
-.plan-card .plan-frame-4 {
-    align-items: flex-start;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 32px;
-    position: relative;
-}
-
-.plan-card .each-magazine {
+.price-card .each-magazine {
     color: var(--isabeline);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: normal;
-    margin-top: -1px;
     position: relative;
     white-space: nowrap;
     width: fit-content;
 }
 
-
-
-.plan-card .plan-frame-5 {
+.price-card .bullets-cont {
     align-items: flex-start;
-    display: inline-flex;
+    align-self: stretch;
+    border-color: var(--isabeline);
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     gap: 10px;
+    padding: 32px 0px;
     position: relative;
+    width: 100%;
 }
 
-.plan-card .plan-frame-6 {
+.price-card .bullet {
     align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
@@ -135,13 +132,13 @@
     position: relative;
 }
 
-.plan-card .check-circle {
+.price-card .check-circle {
     height: 30px;
     position: relative;
     width: 30px;
 }
 
-.plan-card .plan-text-wrapper-2 {
+.price-card .div {
     color: var(--isabeline);
     font-family: "HK Grotesk-RegularLegacy", Helvetica;
     font-size: 20px;
@@ -154,12 +151,118 @@
     width: fit-content;
 }
 
-.plan-card .button-secondary-instance {
-    border-color: var(--isabeline) !important;
-    flex: 0 0 auto !important;
-    width: 357px !important;
-}
+@media screen and (max-width:768px) {
+    .price-card {
+        gap: 22px;
+        height: auto;
+        padding: 20px 0px;
+        width: 297px;
+        margin: 0 !important;
+    }
+    
+    .price-card .title {
+        align-items: center;
+        background-color: #f7f5f2;
+        display: inline-flex;
+        flex: 0 0 auto;
+        gap: 10px;
+        justify-content: center;
+        padding: 16px 32px;
+        position: relative;
+    }
+    
+    .price-card .head .text-wrapper {
+        font-size: 16px;
+    }
+    
+    .price-card .star {
+        height: 40px;
+        position: relative;
+        width: 40px;
+    }
+    
+    .price-card .cont {
+        padding: 0px 20px;
 
-.plan-card .design-component-instance-node {
-    color: var(--isabeline) !important;
+    }
+    
+    .price-card .text-wrap {
+        align-items: flex-start;
+        align-self: stretch;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 22px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .price-card .discription {
+        align-self: stretch;
+        color: var(--isabeline);
+        font-family: "HK Grotesk-LightLegacy", Helvetica;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-top: -1px;
+        opacity: 0.5;
+        position: relative;
+    }
+    
+    .price-card .each-magazine {
+        color: var(--isabeline);
+        font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0;
+        line-height: normal;
+        position: relative;
+        white-space: nowrap;
+        width: fit-content;
+    }
+    
+    .price-card .bullets-cont {
+        align-items: flex-start;
+        align-self: stretch;
+        border-color: var(--isabeline);
+        border-top-style: solid;
+        border-top-width: 1px;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 32px 0px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .price-card .bullet {
+        align-items: center;
+        display: inline-flex;
+        flex: 0 0 auto;
+        gap: 8px;
+        position: relative;
+    }
+    
+    .price-card .check-circle {
+        height: 30px;
+        position: relative;
+        width: 30px;
+    }
+    
+    .price-card .div {
+        color: var(--isabeline);
+        font-family: "HK Grotesk-RegularLegacy", Helvetica;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+        opacity: 0.8;
+        position: relative;
+        white-space: nowrap;
+        width: fit-content;
+    }
+    
+    
 }

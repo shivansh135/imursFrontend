@@ -4,20 +4,17 @@ import "./corporate.css";
 export const Corporate = () => {
     return (
         <div className="corporate">
-            <div className="corporate-wrapper">Corporate Plans</div>
-            <div className="corporate-div">
-                <div className="corporate-wrapper-2">Select the No Magazine           <svg
-            className={`dropdown-arrow down`}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="20" // Adjust the width to your desired size
-            height="20" // Adjust the height to your desired size
-           
-          >
-            <path d="M7 10l5 5 5-5z" />
-          </svg></div>
-              
-            </div>
+          <div className="corporate-wrapper">Corporate Plans</div>
+         <div class="dropdown">
+  <button class="btn dropdown-toggle corporate-div" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <div className="corporate-wrapper-2">Select the No Magazine</div>
+  </button>
+  <ul class="dropdown-menu " style={{width:"100%"}}>
+    <li><a class="dropdown-item " href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
             <p className="bundle">( Select a Bundle to view pricing )</p>
         </div>
     );

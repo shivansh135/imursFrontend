@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.dropdown-item,.dropdown-menu
+{
+    background-color: var(--newisabeline) ;
+}
 .corporate .corporate-wrapper {
     color: var(--newjet-black);
     font-family: "Scilla-Regular", Helvetica;
@@ -30,6 +34,7 @@
     padding: 20px 40px;
     position: relative;
     width: 451px;
+    border-radius: 0%;
 }
 
 .corporate .corporate-wrapper-2 {
