@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ButtonSecondary } from "../button/button";
@@ -7,6 +6,7 @@ import "./navbar.css";
 export const NavbarLanding = () => {
     const [scrolling, setScrolling] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
+    const [isMenuclosing, setIsMenuClosing] = useState(false); 
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -25,12 +25,17 @@ export const NavbarLanding = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle menu state
+        setIsMenuClosing(false)
     };
 
     // Function to close the menu
     const closeMenu = () => {
-        setIsMenuOpen(false);
+        setIsMenuClosing(true);
+        setTimeout(()=>{
+            setIsMenuOpen(false);
+        },1000)   
     };
+
     
    
 
@@ -41,11 +46,11 @@ export const NavbarLanding = () => {
             <ButtonSecondary className="hidden"/>
             
             {/* Pass the closeMenu function as a prop */}
-            {isMenuOpen && <NavOpen closeMenu={closeMenu} />}
+            {isMenuOpen && <NavOpen closeMenu={closeMenu} isMenuclosing={isMenuclosing} />}
         </div>
     );
 };
-export const NavOpen = ({ closeMenu }) => {
+export const NavOpen = ({ closeMenu,isMenuclosing }) => {
 
 
     const click=()=>
@@ -56,7 +61,7 @@ export const NavOpen = ({ closeMenu }) => {
 
     return (
         
-        <div className="nav-open">
+        <div className={`nav-open ${isMenuclosing ? 'fade-out':'' }`}>
             <i class="fa-solid fa-x close" onClick={closeMenu}></i>
             <div className="frame">
                 <div className="div">

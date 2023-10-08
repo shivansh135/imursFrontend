@@ -46,6 +46,7 @@
     padding: 20px 30px;
     gap: 50px;
     animation:0.4s navAnimation;
+    transition: 0.4s;
     transform-origin: 0 0;
 } 
 
@@ -78,6 +79,10 @@
     transition: 0.2s;
     border-bottom: 3px solid var(--persian-red);
     width: 100%;
+}
+
+a{
+    text-decoration: none !important;
 }
 
 .nav-open .frame-2:hover{
@@ -154,8 +159,8 @@
 }
 
 @keyframes navAnimation {
-    from {transform: scaleY(0);}
-    to {transform: scaleY(1);}
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0%);}
   }
 
   @media screen and (max-width: 768px) {
@@ -190,4 +195,8 @@
         height: fit-content;
         width: fit-content;
     }
+}
+
+.fade-out{
+    transform: translateY(-100%);
 }
