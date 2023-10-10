@@ -85,7 +85,7 @@
     .flipbook-container-product .heading {
         color: var(--new-jet-black, #333332);
         text-align: center;
-        font-family: FreightBig Pro;
+        font-family: freight-big-pro;
         font-size: 20px;
         font-style: normal;
         font-weight: 300;

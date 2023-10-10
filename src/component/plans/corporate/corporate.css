@@ -12,7 +12,8 @@
 }
 .corporate .corporate-wrapper {
     color: var(--newjet-black);
-    font-family: "Scilla-Regular", Helvetica;
+    font-family: freight-big-pro
+, Helvetica;
     font-size: 64px;
     font-weight: 400;
     letter-spacing: 0;

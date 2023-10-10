@@ -7,35 +7,39 @@ import { FlipbookContainer } from "../flipBookShow/flipBookShow";
 import {VideoBackground} from "../displayVideo/video";
 import { PartnerInvite } from "../partnerInvite/partnerInvite";
 import Courosal from "../feedback/courosal/courosal";
-
-
-
-
-
-
-
-
-
+import { DecorCard } from "../product/cards/decorCard/decorCard";
+import { ProcessContainer } from "../product/cards/processCard/processCard";
+import ProductGrid from "../product/product-grid/product-grid";
+import { MainHeading } from "../headings/heading";
 
 
 export const Home = () => {
     return (
-        <>
-      
+        <div className="body" style={{display:'flex',flexDirection:"column"}}>
         <VideoBackground/>
-        <div style={{ marginTop: "40px" }} />
+        
         <FlipbookContainer/>
-        <div style={{ marginTop: "40px" }} />
+        
         <InfiniteMarquee />
-        <div style={{ marginTop: "40px" }} />
-          <Courosal/>
-       
+
+        <MainHeading name="Imurs' Greatest Hits"/>
         
-        <div style={{ marginTop: "40px" }} />  
+        <ProductGrid/>
+
+        <ProcessContainer/>
+
+        <MainHeading name="Redecorating Home with Memories"/>
+
+        <DecorCard/>
+
+        <MainHeading name="Nostalgia Champions"/>
+
+        <Courosal/>
+          
         <PartnerInvite/>
-        <div style={{ marginTop: "40px" }} />
         
         
-        </>
+        
+        </div>
     );
 };

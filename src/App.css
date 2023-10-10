@@ -14,6 +14,10 @@
 
 }
 
+.body{
+    gap: 100px;
+}
+
 @media screen and (max-width: 768px) {
     :root {
         --font-xxl: 32px;
@@ -21,7 +25,9 @@
         --font-l: 16px;
         --font-m: 14px;
         --font-s: 10px;
-    
+    }
+    .body{
+        gap: 60px;
     }
 }
 

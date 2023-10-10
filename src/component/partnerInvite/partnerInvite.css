@@ -29,7 +29,8 @@
 .partner .heading {
     align-self: stretch;
     color: var(--isabeline);
-    font-family: "Scilla-Regular", Helvetica;
+    font-family: freight-big-pro
+, Helvetica;
     font-size: 48px;
     font-weight: 400;
     letter-spacing: 0;

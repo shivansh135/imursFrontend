@@ -64,7 +64,7 @@ export default function ProductGrid() {
         </div>
       )}
 
-      <div className="mt-5" style={{ display: "flex", justifyContent: "center" }}>
+      <div className="mt-5" style={{ display: "flex", justifyContent: "center",display:'none' }}>
         <nav aria-label="...">
           <ul className="pagination">
             <li className="page-item disabled">
