@@ -10,7 +10,7 @@ export const PriceCard = (props) => {
                     <div className="text-wrapper">IMURS {props.text}</div>
                 </div>
                 <div className="icon">
-                <img className="plan-star" alt="Star" src={props.out} />
+                <img className="star" alt="Star" src={props.out} />
                     
                 </div>
             </div>
@@ -46,7 +46,6 @@ export const PriceCard = (props) => {
         </div>
     );
 };
-
 
 
 export const PriceCard2 = (props) => {
