@@ -139,6 +139,6 @@
         margin: auto;
         margin-top: -92px;
         margin-bottom: -72px;
-        rotate: 90deg;
+        transform: rotate(90deg);
     }
 }

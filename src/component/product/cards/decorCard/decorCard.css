@@ -2,8 +2,9 @@
 .container-desktop{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
+    gap: 2rem;
 }
 .container-mobile{
     display: none;

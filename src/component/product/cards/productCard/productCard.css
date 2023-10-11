@@ -66,13 +66,18 @@
     text-decoration: underline;
     white-space: nowrap;
     width: fit-content;
+    height: 100%;
 }
+
 
 .product .arrow-outward {
     height: 24px;
     position: relative;
     width: 24px;
 }
+
+
+
 @media screen and (max-width: 768px) {
     .product{
         gap:8px;

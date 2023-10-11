@@ -68,7 +68,10 @@
     white-space: nowrap;
     width: fit-content;
 }
-
+.product .learn-more:hover
+{
+    opacity: 0.6;
+}
 .product .arrow-outward {
     height: 24px;
     position: relative;

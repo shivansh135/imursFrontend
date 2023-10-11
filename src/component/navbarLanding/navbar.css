@@ -14,7 +14,7 @@
 .nav .menu {
     height: 42px;
     position: relative;
-    width: 42px;
+    width: 200px;
     font-size: 28px;
     cursor: pointer;
 }
@@ -67,6 +67,7 @@
     flex-direction: column;
     gap: 30px;
     position: relative;
+    width: 60%;
     
 }
 
@@ -94,7 +95,7 @@ a{
     color: var(--isabeline);
     font-family: freight-big-pro
 , Helvetica;
-    font-size: 36px;
+    font-size: 22px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: normal;
