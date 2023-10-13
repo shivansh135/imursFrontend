@@ -39,7 +39,7 @@ class Flipbook extends Component {
       autoEnableOutline: "false",
       forceFit:true,
       outline:[],
-      color3DCover:"#fff",
+      color3DCover:"#f7f5f2",
       hard: "none",
       shadowOpacity: 0,
       allControls: "",
