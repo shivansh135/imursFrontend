@@ -47,6 +47,8 @@
     }
 }
 
-body{
+body,html{
     background-color: var(--isabeline);
+    overflow-x: clip;
+    overflow-x: hidden;
 }
