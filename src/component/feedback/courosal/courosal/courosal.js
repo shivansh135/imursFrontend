@@ -4,14 +4,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/scrollbar';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import './courosal.css';
 
 // import required modules
-import { Keyboard, Scrollbar, Navigation, Pagination } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Feedback } from '../feedback-cards/card';
 
 export default function App() {
@@ -19,38 +18,24 @@ export default function App() {
     <>
       <Swiper
         slidesPerView={1}
-        centeredSlides={false}
-        slidesPerGroupSkip={1}
-        grabCursor={true}
-        keyboard={{
-          enabled: true,
+        spaceBetween={30}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
         }}
-        breakpoints={{
-          769: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-        }}
-        scrollbar={true}
-        navigation={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+        navigation={false}
+        
+        modules={[Pagination, Navigation,Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-        <Feedback/>
-        </SwiperSlide>
-        <SwiperSlide>
-        <Feedback/>
-        </SwiperSlide><SwiperSlide>
-        <Feedback/>
-        </SwiperSlide><SwiperSlide>
-        <Feedback/>
-        </SwiperSlide><SwiperSlide>
-        <Feedback/>
-        </SwiperSlide>
+        <SwiperSlide><Feedback/></SwiperSlide>
+        <SwiperSlide><Feedback/></SwiperSlide>
+        <SwiperSlide><Feedback/></SwiperSlide>
+        <SwiperSlide><Feedback/></SwiperSlide>
       </Swiper>
     </>
   );
