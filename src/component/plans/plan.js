@@ -13,7 +13,7 @@ export default function Plan() {
       <PriceCard out="sun.png" in="transparent" text="Impression" cardColor= "var(--persian-red)"/>
       <PriceCard out="newstar.png" in="transparent" text="Idyllic" />
     </div>
-   
+    <div style={{ marginTop: "100px" }} />
     </>
   )
 }

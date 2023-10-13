@@ -5,7 +5,7 @@
     padding: 15px;
     position: fixed;
     top:0;
-    z-index: 999;
+    z-index: 99999999;
     width: 100%;
     background-color: transparent;
     transition: 0.5s;
@@ -21,8 +21,7 @@
 
 .nav .navTitle {
     color: var(--newjet-black);
-    font-family: freight-big-pro
-, Helvetica;
+    font-family: 'Playfair Display SC', serif;
     font-size: 42px;
     font-weight: 400;
     letter-spacing: 0;
@@ -113,9 +112,9 @@ a{
 
 .nav-open .img {
     height: 1px;
-    margin-bottom: -3085px;
-    margin-right: -1284px;
-    position: relative;
+    margin-top: 200px;
+    margin-right: 0px;
+    position: absolute;
     width: 907px;
 }
 
@@ -137,8 +136,7 @@ a{
 
 .nav-open .text-wrapper-2 {
     color: var(--isabeline);
-    font-family: freight-big-pro
-, Helvetica;
+    font-family: 'Playfair Display SC', serif;
     font-size: 200px;
     font-weight: 400;
     letter-spacing: 0;
@@ -149,11 +147,11 @@ a{
 }
 
 .nav-open .star {
-    height: 650px;
-    left: 1135px;
+    height: auto;
+    right: 0;
     position: absolute;
-    top: 103px;
-    width: 653px;
+    top: 83px;
+    width: 293px;
 }
 
 .close{

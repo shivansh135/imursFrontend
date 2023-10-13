@@ -2,7 +2,7 @@
     align-items: center;
     background-color: var(--jet-black);
     display: flex;
-    gap: 60px 60px;
+    gap: 20px 20px;
     padding: 60px;
     position: relative;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@
     display: flex;
     flex: 0 0 auto;
     flex-direction: column;
-    gap: 40px;
+    gap: 18px;
     position: relative;
     min-width: 560px;
     max-width: 0px;
@@ -44,7 +44,7 @@
 .partner .text {
     color: var(--isabeline);
     font-family: "HK Grotesk-RegularLegacy", Helvetica;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 26.4px;
@@ -93,7 +93,7 @@
     }
     
     .partner .cont {
-        gap: 15px;
+        gap: 14px;
         justify-content: center;
         margin: auto;
         min-width: 360px;
@@ -109,6 +109,7 @@
         font-size: 12px;
         min-width: 0px;
         text-align: center;
+        line-height: 14px;
     }
     
     .partner .button-secondary {

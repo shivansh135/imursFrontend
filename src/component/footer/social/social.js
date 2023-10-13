@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useReducer } from "react"; // Import React and useReducer from "react"
 import "./social.css";
-
+import buttonaero from './buttonaero.svg';
 export const Socials = ({ property1, className, text }) => { // Correct the destructuring of props
     const [state, dispatch] = useReducer(reducer, {
         property1: property1 || "default",
@@ -10,9 +10,11 @@ export const Socials = ({ property1, className, text }) => { // Correct the dest
     return (
         <div
             className={`socials ${state.property1} ${className}`}
+            style={{justifyContent:"space-between"}}
         >
             <div className="text-wrapper">{text}</div> {/* Use text prop instead of props.text */}
             {state.property1 === "variant-2" && <img className="arrow-outward" alt="Arrow outward" src="arrow-outward.png" />}
+               <img className="buttonaero" src={buttonaero} />
         </div>
     );
 };

@@ -8,6 +8,7 @@
     padding: 20px 40px;
     position: relative;
     width: 200px;
+    
   }
 
   .button-secondary .red{
@@ -30,7 +31,7 @@
   
   .button-secondary:hover {
     background-color: #b73e33;
-    border-color: #b73e33;
+    border-color: var( --isabeline);
   }
   
   .button-secondary:hover .text-wrapper {

@@ -6,7 +6,7 @@ import { InfiniteMarquee } from "../marquee/marquee"
 import { FlipbookContainer } from "../flipBookShow/flipBookShow";
 import {VideoBackground} from "../displayVideo/video";
 import { PartnerInvite } from "../partnerInvite/partnerInvite";
-import Courosal from "../feedback/courosal/courosal";
+
 import { DecorCard } from "../product/cards/decorCard/decorCard";
 import { ProcessContainer } from "../product/cards/processCard/processCard";
 import ProductGrid from "../product/product-grid/product-grid";
@@ -34,7 +34,7 @@ export const Home = () => {
 
         <MainHeading name="Nostalgia Champions"/>
 
-        <Courosal/>
+       
           
         <PartnerInvite/>
         

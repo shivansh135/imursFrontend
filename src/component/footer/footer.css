@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--isabeline);
+    background-color: var(--jet-black);
     position: relative;
     width: 100%;
     display: flex;
@@ -47,7 +47,7 @@
 }
 
 .footer .text-wrapper {
-    color: var(--jet-black);
+    color: var(--isabeline);
     font-family: "HK Grotesk-RegularLegacy", Helvetica;
     font-size: 12px;
     font-weight: 400;
@@ -68,8 +68,8 @@
 }
 
 .footer .title {
-    color: var(--newjet-black);
-    font-family: "HK Grotesk-Black", Helvetica;
+    color: var(--isabeline);
+    font-family: 'Playfair Display SC', serif;
     font-size: 180px;
     font-weight: 400;
     letter-spacing: 0;
@@ -81,7 +81,7 @@
 }
 
 .footer .sub-title {
-    color: var(--jet-black);
+    color: var(--isabeline);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 18px;
     font-weight: 600;

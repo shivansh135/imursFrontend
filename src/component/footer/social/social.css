@@ -2,6 +2,7 @@
     align-items: center;
     display: flex;
     position: relative;
+    transition: 0.2s;
 }
 
 .socials .text-wrapper {
@@ -21,7 +22,7 @@
 
 .socials.default {
     border: 2px solid;
-    border-color: #000000;
+    border-color: var(--isabeline);
     gap: 10px;
     padding: 20px 30px;
     width: 338px;
@@ -29,7 +30,7 @@
 
 .socials.variant-4 {
     border: 1px solid;
-    border-color: #000000;
+    border-color: var(--isabeline);
     gap: 10px;
     height: 46px;
     padding: 16px 36px;
@@ -47,7 +48,7 @@
 }
 
 .socials.default .text-wrapper {
-    color: #000000;
+    color: var(--isabeline);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 18px;
     font-weight: 600;
@@ -55,11 +56,47 @@
     margin-top: -2px;
 }
 
+.socials:hover
+{
+    background-color: var(--isabeline);
+   
+}
+
+.buttonaero
+{
+    opacity: 0;
+    transition: 0.2s;
+
+   
+}
+.socials:hover .text-wrapper
+{
+    color: var(--persian-red);
+    
+}
+
+.socials:hover .buttonaero
+{
+    opacity: 1;
+    
+}
+
+
 /* Media Queries for .socials.default */
 @media screen and (max-width: 768px) {
     .socials.default {
         width: 100%; /* Adjust the width for smaller screens */
     }
+    .socials:hover .buttonaero
+{
+    opacity: 0;
+    
+}
+.socials:hover
+{
+    background-color: var(--jetblack);
+   
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -67,20 +104,22 @@
         width: 45%;
         padding: 10px 20px; /* Adjust padding for smaller screens */
         border: 1px solid;
+        border-color: var(--isabeline);
     }
     .socials.default .text-wrapper {
-        color: #000000;
+        color: var(--isabeline);
         font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
         font-size: 12px;
         font-weight: 600;
         line-height: 16px;
         margin-top: -2px;
+        
     }
 }
 
 
 .socials.variant-4 .text-wrapper {
-    color: #000000;
+    color: var(--isabeline);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 12px;
     font-weight: 600;

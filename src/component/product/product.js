@@ -1,10 +1,7 @@
 import React from 'react'
-import Courosal from '../feedback/courosal/courosal'
 import { InfiniteIconMarquee, InfiniteMarquee } from '../marquee/marquee'
 import { PartnerInvite } from '../partnerInvite/partnerInvite'
 import { ProductFlipBook } from './cards/productFlipbook/productFlipBook'
-import ProductGrid from './product-grid/product-grid'
-import { ProducTitle } from './product-title/product-title'
 import { HedingSubheding } from '../headings/heading'
 import { Feedback } from '../feedback/courosal/feedback-cards/card'
 
