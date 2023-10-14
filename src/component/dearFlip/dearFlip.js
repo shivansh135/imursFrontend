@@ -61,10 +61,14 @@ class Flipbook extends Component {
 //     });
 //   }
 
+
   render() {
+    const {source } = this.props;
+    console.log(source)
+   
     return (
       <div>
-        <div className="_df_book" id="flipbook" pageMode='2' source="Print_DikshaUtkarsh.pdf"></div>
+        <div className="_df_book" id="flipbook" pageMode='2' source={source}></div>
       </div>
     );
   }

@@ -20,11 +20,18 @@ export const Home = () => {
     const [info, setInfo] = useState(null);
 
     useEffect(() => {
-      fetch("http://localhost:4000/api/product")
+      fetch("https://iamyourstoryclint.el.r.appspot.com/api/product")
         .then((response) => response.json())
         .then((data) => {
           // Store the fetched data in the 'info' state variable
-          setInfo(data);
+          
+          setInfo(data.product);
+           console.log(data.product)
+        
+
+
+
+
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -44,11 +51,11 @@ export const Home = () => {
         <div className="body" style={{display:'flex',flexDirection:"column"}}>
         <VideoBackground/>
         
-        <FlipbookContainer/>
+        <FlipbookContainer source={"Print_DikshaUtkarsh.pdf"}/>
         
         <InfiniteMarquee />
         <div className="cardsspacing" > <MainHeading name="Imurs' Greatest Hits"/>
-        <ProductGrid/>
+        <ProductGrid  info={info}/>
         
         </div>
        
@@ -60,7 +67,7 @@ export const Home = () => {
 
 
         <div className="cardsspacing" >   <MainHeading name="Renovating Homes with Memories"/>
-        <DecorCard/>
+        <DecorCard />
         
         </div>
         

@@ -50,7 +50,7 @@ export const NavbarLanding = () => {
            </div>
 
           { /* <i className='fa-solid fa-bars menu' ></i>*/}
-            <div className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>ImUrs</div>
+            <NavLink exact to="/" className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>ImUrs</NavLink>
             <ButtonSecondary className="hidden"/>
             
             {/* Pass the closeMenu function as a prop */}
@@ -82,7 +82,7 @@ export const NavOpen = ({ closeMenu,isMenuclosing }) => {
                         <NavLink exact to="/" className="text-wrapper" onClick={click} >HOME</NavLink>
                     </div>
                     <div className="frame-2">
-                        <NavLink exact to="/product" className="text-wrapper" onClick={click} >PRODUCT</NavLink>
+                        <NavLink  className="text-wrapper" onClick={click} >PRODUCT</NavLink>
                     </div>
                     <div className="frame-2">
                         <NavLink exact to="/plans" className="text-wrapper" onClick={click}>CORPORATE PLANS</NavLink>
@@ -91,7 +91,7 @@ export const NavOpen = ({ closeMenu,isMenuclosing }) => {
                         <NavLink exact to="/price" className="text-wrapper" onClick={click}>PRICING</NavLink>
                     </div>
                 </div>
-                <div className="text-wrapper-2">IMURS</div>
+                <div  className="text-wrapper-2">IMURS</div>
             </div>
             <img className="star" alt="Star" src="star-5.png" />
         </div>

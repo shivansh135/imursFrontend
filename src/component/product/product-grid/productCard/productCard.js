@@ -1,23 +1,33 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./productCard.css";
 
-export const Productcard = () => {
+export const Productcard = (props) => {
+
+
+   
+
+     
+
+
+
     return (
-        <div className="product">
-            <img className="image" alt="Image" src="sample.jfif" />
+        
+        <Link to="/product" state={{ info:props.info }}className="product">
+            <img className="image" alt="Image"  src={`https://drive.google.com/uc?export=view&id=${props.artwork}&amp;cache-control=max-age=172800`} />
             <div className="text-wrap">
                 <p className="palak-and-dharmesh">
                     <span className="text-wrapper">
-                        Palak and Dharmesh
+                       {props.title}
                         <br />
                     </span>
-                    <span className="span">Souvenir Magazine</span>
+                    <span className="span">{props.category}</span>
                 </p>
                 <div className="learn-more">
                     <div className="div">Learn More</div>
                     <img className="arrow-outward" alt="Arrow outward" src="arrow_outward.svg" />
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };

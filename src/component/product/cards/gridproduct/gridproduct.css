@@ -6,7 +6,12 @@
     position: relative;
     padding: 20px;
   }
-  
+  .god
+  {
+    background-position: center !important;
+    background-size: 100% !important;
+
+  }
   .top-img-group .frame {
     display: flex;
     flex-direction: column;
@@ -15,6 +20,7 @@
     gap: 10px;
     position: relative;
     width: 364.84px;
+   
   }
   
   .top-img-group .imgB {

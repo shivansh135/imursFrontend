@@ -1,7 +1,18 @@
 import React from "react";
 import "./productCard.css";
 
-export const Product = () => {
+export const Product = (props) => {
+
+
+useEffect(() => {
+ 
+console.log(props.artwork)
+ 
+}, [props.artwork])
+
+
+
+
     return (
         <div className="product">
             <img className="image" alt="Image" src="sample.jfif" />

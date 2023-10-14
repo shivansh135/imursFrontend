@@ -3,7 +3,8 @@ import "./flipbookShow.css";
 import { ButtonSecondary } from "../button/button";
 import Flipbook from "../dearFlip/dearFlip";
 
-export const FlipbookContainer = () => {
+export const FlipbookContainer = (props) => {
+  console.log(props.source)
   const [showIframe, setShowIframe] = useState(true);
   const [showFlipbook, setShowFlipbook] = useState(false);
   const [showContent, setShowContent] = useState(true);
@@ -61,7 +62,7 @@ export const FlipbookContainer = () => {
     <div style={{position:"relative"}}>
     <div style={{width:'100%',margin:'auto',display:`${showIframe ? "none" : "block"}`}}>
         <div style={{opacity:`${showFlipbook ? "1" : "0"}`}}>
-        <Flipbook />
+        <Flipbook source={props.source}/>
 
         </div>
         <div style={{position:'relative',margin:'auto',width:'fit-content'}}>
