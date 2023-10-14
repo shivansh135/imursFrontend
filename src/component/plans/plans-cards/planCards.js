@@ -1,8 +1,25 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { ButtonPrimary } from "../../button1/button1";
 import "./planCards.css";
-import { ButtonSecondary } from "../../button/button";
+
 
 export const PriceCard = (props) => {
+
+    const [bullets, setBullets] = useState([]);
+
+    useEffect(() => {
+     
+      const bulletsArray = props.bullets.split(",");
+    
+      
+      const trimmedBulletsArray = bulletsArray.map((bullet) => bullet.trim());
+    
+     console.log(trimmedBulletsArray);
+      setBullets(trimmedBulletsArray);
+    }, [props.bullets]);
+  
+
+
     return (
         <div className="price-card" style={{background:props.cardColor ,marginTop:(props.text==="Impression")?"0px":"none"}} >
             <div className="head">
@@ -58,32 +75,19 @@ export const PriceCard = (props) => {
             </div>
             <div className="cont">
                 <div className="text-wrap">
-                    <p className="discription">Lorem ipsum dolor sit amet lorem ipsum dolor sit amer jixm</p>
-                    <div className="each-magazine">₹ -&nbsp;&nbsp;/ each magazine</div>
+                    <p className="discription">{props.description}</p>
+                    <div className="each-magazine">₹ {props.price}/ each magazine</div>
                     <div className="bullets-cont">
-                        <div className="bullet">
-                            <img className="check-circle" alt="Check circle" src="check-circle.png" />
-                            <div className="div">No of pages</div>
-                        </div>
-                        <div className="bullet">
-                            <img className="check-circle" alt="Check circle" src="check-circle.png" />
-                            <div className="div">No of pages</div>
-                        </div>
-                        <div className="bullet">
-                            <img className="check-circle" alt="Check circle" src="check-circle.png" />
-                            <div className="div">No of pages</div>
-                        </div>
-                        <div className="bullet">
-                            <img className="check-circle" alt="Check circle" src="check-circle.png" />
-                            <div className="div">No of pages</div>
-                        </div>
-                        <div className="bullet">
-                            <img className="check-circle" alt="Check circle" src="check-circle.png" />
-                            <div className="div">No of pages</div>
-                        </div>
-                    </div>
+      {bullets.map((bullet, index) => (
+        <div className="bullet" key={index}>
+          <img className="check-circle" alt="Check circle" src="check-circle.png" />
+          <div className="div">{bullet}</div>
+        </div>
+      ))}
+    </div>
                 </div>
-                <ButtonSecondary/>
+                <ButtonPrimary/>
+                
             </div>
         </div>
     );
@@ -128,11 +132,7 @@ export const PriceCard2 = (props) => {
                         </div>
                     </div>
                 </div>
-                <ButtonSecondary
-                    className="button-secondary-instance"
-                    divClassName="design-component-instance-node"
-                    text="GET STARTED"
-                />
+                
             </div>
         </div>
     );

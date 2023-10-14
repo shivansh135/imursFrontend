@@ -1,23 +1,23 @@
-.button-secondary {
+.button-primary {
     align-items: center;
     border: 1px solid;
-    border-color: #333332;
+    border-color:var(--isabeline);
     display: flex;
     gap: 20px;
     justify-content: center;
     padding: 20px 40px;
     position: relative;
-    width: 200px;
+    width: 100%;
     
   }
 
-  .button-secondary .red{
+  .button-primary .red{
     background-color: var(--persian-red);
   }
   
-  .button-secondary .text-wrapper {
-    color: #333332;
-    font-family: 'HK Grotesk-MediumLegacy' Helvetica;
+  .button-primary .text-wrapper {
+    color: var(--isabeline);
+    font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0;
@@ -26,34 +26,34 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
-    text-transform: uppercase;
     width: fit-content;
   }
   
-  .button-secondary:hover {
+  .button-primary:hover {
     background-color: #b73e33;
     border-color: var( --isabeline);
   }
   
-  .button-secondary:hover .text-wrapper {
+  .button-primary:hover .text-wrapper {
     color: #f7f5f2;
   }
   @media screen and (max-width: 768px) {
-    .button-secondary {
+    .button-primary {
         align-items: center;
         border: 1px solid;
-        border-color: var(--newjet-black);
+        border-color: var(--isabeline);
         display: inline-flex;
         gap: 20px;
         justify-content: center;
-        padding: 16px 30px;
+        padding: 10px 20px;
         position: relative;
+        width: 100%;
       }
       
-      .button-secondary .text-wrapper {
-        color: var(--newjet-black);
-        font-family: 'HK Grotesk-MediumLegacy', Helvetica;
-        font-size: 12px;
+      .button-primary .text-wrapper {
+        color: var(--isabeline);
+        font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
+        font-size: 10px;
         font-weight: 600;
         letter-spacing: 0;
         line-height: normal;
@@ -73,7 +73,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .button-secondary .text-wrapper {
+    .button-primary .text-wrapper {
         font-size: 12px; /* Further adjust font size for even smaller screens */
     }
 }

@@ -35,7 +35,8 @@ export const NavbarLanding = () => {
             setIsMenuOpen(false);
         },1000)   
     };
-
+    const currentPathname = window.location.pathname;
+    
     
    
 
@@ -49,7 +50,7 @@ export const NavbarLanding = () => {
            </div>
 
           { /* <i className='fa-solid fa-bars menu' ></i>*/}
-            <div className="navTitle">IMURS</div>
+            <div className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>ImUrs</div>
             <ButtonSecondary className="hidden"/>
             
             {/* Pass the closeMenu function as a prop */}

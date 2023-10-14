@@ -5,7 +5,13 @@
     justify-content: center;
     width: 100%;
 }
-
+.cardsspacing
+{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
 .IMURS-corporate .div-2 {
     background-color: var(--newisabeline);
     height: 1500px;
@@ -377,4 +383,11 @@
     left: 0 !important;
     position: absolute !important;
     top: 1409px !important;
+}
+@media screen and (max-width: 768px)
+{
+    .cardsspacing
+    {
+        gap:20px;
+    }
 }

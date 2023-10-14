@@ -92,6 +92,20 @@
         font-size: 12px;
     }
     .product .div {
+        font-size: 12px;
+    font-weight: 400;
+
+    }
+    .product .span {
+        color: #333332;
+        font-family: "HK Grotesk-Medium", sans-serif;
+        font-weight: 500;
         font-size: 14px;
+    }
+    .product .arrow-outward {
+        height: 16px;
+        position: relative;
+        width: 16px;
+
     }
 }

@@ -20,7 +20,7 @@ export const DecorCard = () => {
                             She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
                             everyday.
                         </p>
-                        <ButtonSecondary/>
+                        <ButtonSecondary text={'Renovate Yours'}/>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ export const DecorCard = () => {
                             She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
                             everyday.
                         </p>
-                        <ButtonSecondary/>
+                        <ButtonSecondary text={'Renovate Yours'}/>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export const DecorCard = () => {
                                 She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
                                 everyday.
                             </p>
-                            <ButtonSecondary/>
+                            <ButtonSecondary text={'Renovate Yours'}/>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ export const DecorCard = () => {
                     </div>
                     <div className="cont">
                         <div className="headin">
-                            <div className="name">Rishika’s</div>
+                            <div className="name">Ridhima's</div>
                             <div className="catigory">Living Room</div>
                         </div>
                         <div className="text-wrap">
@@ -85,7 +85,7 @@ export const DecorCard = () => {
                                 She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
                                 everyday.
                             </p>
-                            <ButtonSecondary/>
+                            <ButtonSecondary text={'Renovate Yours'}/>
                         </div>
                     </div>
                     </div>

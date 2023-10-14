@@ -93,6 +93,11 @@
         font-size: 12px;
     }
     .product .div {
-        font-size: 14px;
+        font-size: 10px;
+    }
+    .product .arrow-outward {
+        height: 12px;
+        position: relative;
+        width: 12px;
     }
 }

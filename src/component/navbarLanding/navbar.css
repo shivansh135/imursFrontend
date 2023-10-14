@@ -20,15 +20,19 @@
 }
 
 .nav .navTitle {
-    color: var(--newjet-black);
+    color: var(--isabeline);
     font-family: 'Playfair Display SC', serif;
     font-size: 42px;
-    font-weight: 400;
-    letter-spacing: 0;
+    font-weight: 700;
+    letter-spacing: -3px;
     line-height: normal;
     position: relative;
     white-space: nowrap;
     width: fit-content;
+}
+
+.nav.scrolled .navTitle{
+    color: var(--newjet-black) !important;
 }
 
 .nav.scrolled {
@@ -92,8 +96,7 @@ a{
 
 .nav-open .text-wrapper {
     color: var(--isabeline);
-    font-family: freight-big-pro
-, Helvetica;
+    font-family: freight-big-pro, Helvetica;
     font-size: 22px;
     font-weight: 400;
     letter-spacing: 0;

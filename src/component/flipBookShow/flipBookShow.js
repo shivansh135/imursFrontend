@@ -59,14 +59,15 @@ export const FlipbookContainer = () => {
 
   return (
     <div style={{position:"relative"}}>
-    <div style={{width:'100%',margin:'auto',opacity:`${showFlipbook ? "1" : "0"}`,display:`${showIframe ? "none" : "block"}`}}>
+    <div style={{width:'100%',margin:'auto',display:`${showIframe ? "none" : "block"}`}}>
+        <div style={{opacity:`${showFlipbook ? "1" : "0"}`}}>
         <Flipbook />
-        <div style={{position:'relative',margin:'auto',width:'fit-content'}}>
-        <ButtonSecondary />
+
         </div>
-
-
-      </div>
+        <div style={{position:'relative',margin:'auto',width:'fit-content'}}>
+        <ButtonSecondary text={'order now'}/>
+        </div>
+    </div>
       <div id='cover' className={`flipbook-container  ${showIframe?'':'absolute'}`}>
       <div className='iframe-container' >
         <iframe id="iframe" title="animation" className="flipbook" src="animation.html" />
@@ -78,7 +79,7 @@ export const FlipbookContainer = () => {
             <p className="tag" >Don’t trust us? Experience it live.</p>
           </div>
           <div className="center" style={{width:'fit-content'}} onClick={handleButtonClick}>
-          <ButtonSecondary  />
+          <ButtonSecondary text={'tap to customize'} />
 
           </div>
 

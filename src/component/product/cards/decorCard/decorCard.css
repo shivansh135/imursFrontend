@@ -141,9 +141,10 @@
     }
     .decor-card .cont {
         gap: 15px;
+        padding: 0 20px;
     }
     .decor-card .catigory{
-        font-size: 20px;
+        font-size: 24px;
         line-height: normal;
 
     }
