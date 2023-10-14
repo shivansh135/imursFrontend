@@ -199,6 +199,7 @@ a{
     .nav-open .star {
         height: auto; /* Further adjust star size for mobile */
         width: 100px; /* Further adjust star size for mobile */
+        display: none;
         
     }
     .nav .menu {
