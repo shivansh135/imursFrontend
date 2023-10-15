@@ -12,6 +12,7 @@ import { ProcessContainer } from "../product/cards/processCard/processCard";
 import ProductGrid from "../product/product-grid/product-grid";
 import { MainHeading } from "../headings/heading";
 import Carousel from "../feedback/courosal/courosal/courosal";
+import Courosal from "../feedback/courosal/courosal/courosal";
 
 
 
@@ -48,7 +49,7 @@ export const Home = () => {
 
     
 
-        <div className="body" style={{display:'flex',flexDirection:"column"}}>
+        <div className="body" style={{display:'flex',flexDirection:"column",justifyContent:"center"}}>
         <VideoBackground/>
         
         <FlipbookContainer source={"Print_DikshaUtkarsh.pdf"}/>
@@ -74,8 +75,11 @@ export const Home = () => {
 
         <MainHeading name="Nostalgia Champions"/>
 
-     
-        <Carousel/>
+        
+  <Courosal  />
+
+
+       
         <PartnerInvite/>
         
         

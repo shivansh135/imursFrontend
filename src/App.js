@@ -7,19 +7,23 @@ import { Home } from './component/pricing/home';
 import Product from './component/product/product';
 import { NavbarLanding } from './component/navbarLanding/navbar';
 import { PropertyFooterWrapper } from './component/footer/footer';
+import { Otp } from './component/login/login';
 
 
 function App() {
   return (
     <>
+
+
     <Router>
  <NavbarLanding/>
       <div className="pages">
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/product" element={<Product/>} />
+          <Route path="/product"  element={<Product/>} />
           <Route path="/price" element={<Price/>} />
           <Route path="/plans" element={<Plan/>} />
+          <Route path="/login" element={<Otp/>} />
         </Routes>
       </div>
       <PropertyFooterWrapper/>

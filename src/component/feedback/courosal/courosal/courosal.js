@@ -1,42 +1,69 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import './courosal.css';
+import React from "react";
+import Slider from "react-slick";
+import { FeedbackNew } from "../feedback1-cards/card1";
 
-// import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-import { Feedback } from '../feedback-cards/card';
+const Courosal = () => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
-export default function App() {
   return (
-    <>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={false}
-        
-        modules={[Pagination, Navigation,Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide><Feedback/></SwiperSlide>
-        <SwiperSlide><Feedback/></SwiperSlide>
-        <SwiperSlide><Feedback/></SwiperSlide>
-        <SwiperSlide><Feedback/></SwiperSlide>
-      </Swiper>
-    </>
+    <div style={{marginLeft:"10%",marginRight:"10%",display:"flex",justifyContent:"center",flexDirection:"column"}}>
+      <h2>Responsive</h2>
+      <Slider {...settings}>
+        <div>
+          <h3><FeedbackNew/></h3>
+        </div>
+        <div>
+          <h3><FeedbackNew/></h3>
+        </div>  <div>
+          <h3><FeedbackNew/></h3>
+        </div>  <div>
+          <h3><FeedbackNew/></h3>
+        </div>  <div>
+          <h3><FeedbackNew/></h3>
+        </div>  <div>
+          <h3><FeedbackNew/></h3>
+        </div>
+      </Slider>
+    </div>
   );
-}
+};
+
+export default Courosal;
+``

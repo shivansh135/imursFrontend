@@ -1,0 +1,155 @@
+.feedback-new {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    margin: 30px;
+}
+
+.feedback-new .rectangle {
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+.feedback-new .div {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.feedback-new .frame-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 4px;
+    position: relative;
+}
+
+.feedback-new .text-wrapper {
+    color: var(--jet-black);
+    font-family: var(--desktop-freight-big-pro-large-font-family);
+    font-size: var(--desktop-freight-big-pro-large-font-size);
+    font-style: var(--desktop-freight-big-pro-large-font-style);
+    font-weight: var(--desktop-freight-big-pro-large-font-weight);
+    letter-spacing: var(--desktop-freight-big-pro-large-letter-spacing);
+    line-height: var(--desktop-freight-big-pro-large-line-height);
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+}
+
+.feedback-new .element-prestalo-onli {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-RegularLegacy", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30px;
+    opacity: 0.4;
+    position: relative;
+    text-align: center;
+    width: auto;
+    padding: 20px;
+}
+
+.feedback-new .element-prestalo-onli-2 {
+    color: var(--jet-black);
+    font-family: "HK Grotesk-SemiBoldLegacy Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+@media screen and (max-width:760px) {
+    .feedback-new {
+        align-items: center;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        position: relative;
+        margin: 15px;
+    }
+    
+    .feedback-new .rectangle {
+        height: auto;
+        object-fit: cover;
+        position: relative;
+        width: 100%;
+    }
+    
+    .feedback-new .div {
+        align-items: center;
+        display: inline-flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .feedback-new .frame-2 {
+        align-items: center;
+        display: inline-flex;
+        flex: 0 0 auto;
+        gap: 4px;
+        position: relative;
+    }
+    
+    .feedback-new .text-wrapper {
+        color: var(--jet-black);
+        font-family: var(--desktop-freight-big-pro-large-font-family);
+        font-size: var(--desktop-freight-big-pro-large-font-size);
+        font-style: var(--desktop-freight-big-pro-large-font-style);
+        font-weight: var(--desktop-freight-big-pro-large-font-weight);
+        letter-spacing: var(--desktop-freight-big-pro-large-letter-spacing);
+        line-height: var(--desktop-freight-big-pro-large-line-height);
+        margin-top: -1px;
+        position: relative;
+        width: fit-content;
+    }
+    
+    .feedback-new .element-prestalo-onli {
+        color: var(--jet-black);
+        font-family: "HK Grotesk-RegularLegacy", Helvetica;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+        opacity: 0.4;
+        position: relative;
+        text-align: center;
+        width: auto;
+        padding: 20px;
+    }
+    
+    .feedback-new .element-prestalo-onli-2 {
+        color: var(--jet-black);
+        font-family: "HK Grotesk-SemiBoldLegacy Italic", Helvetica;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        line-height: normal;
+        position: relative;
+        text-align: center;
+        text-decoration: underline;
+        white-space: nowrap;
+        width: fit-content;
+    }
+}
