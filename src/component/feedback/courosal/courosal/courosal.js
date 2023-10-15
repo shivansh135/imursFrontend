@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 import { FeedbackNew } from "../feedback1-cards/card1";
-
+import './courosal.css'
 const Courosal = () => {
   const settings = {
     dots: true,
