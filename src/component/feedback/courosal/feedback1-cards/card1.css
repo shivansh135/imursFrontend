@@ -135,9 +135,11 @@
         position: relative;
         text-align: center;
         width: auto;
-        padding: 20px;
+        padding: 10px;
     }
-    
+    .feedback-new p{
+        margin: 0;
+    }
     .feedback-new .element-prestalo-onli-2 {
         color: var(--jet-black);
         font-family: "HK Grotesk-SemiBoldLegacy Italic", Helvetica;

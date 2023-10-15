@@ -44,7 +44,6 @@ const Courosal = () => {
 
   return (
     <div style={{marginLeft:"10%",marginRight:"10%",display:"flex",justifyContent:"center",flexDirection:"column"}}>
-      <h2>Responsive</h2>
       <Slider {...settings}>
         <div>
           <h3><FeedbackNew/></h3>
