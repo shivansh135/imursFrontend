@@ -6,6 +6,7 @@ import { HedingSubheding } from '../headings/heading'
 import { Feedback, FeedbackDynamic } from '../feedback/courosal/feedback-cards/card'
 import Gridproduct from './cards/gridproduct/gridproduct'
 import { useLocation } from 'react-router-dom'
+import { FlipbookContainer } from '../flipBookShow/flipBookShow'
 
 export default function Product() {
 
@@ -17,7 +18,12 @@ export default function Product() {
     behavior: 'smooth' // You can use 'auto' for instant scrolling or 'smooth' for smooth scrolling
   });
   
-
+  // Outputs "1Jbrp-s-HvqhVgWQZeDx9_vbvRKZAnGWP"
+  
+  const url = new URL("https://drive.google.com/file/d/1Jbrp-s-HvqhVgWQZeDx9_vbvRKZAnGWP/view?usp=drive_link");
+  const pathname = url.pathname;
+  const fileId = pathname.split("/")[3];
+  
 
 
 
@@ -33,8 +39,9 @@ export default function Product() {
 <div className='body' style={{ marginTop: "60px",display:'flex',flexDirection:'column',width:'100%'}}>
     <div/>
     <Gridproduct info={info}/>
+   
     <HedingSubheding heading={info.title} sub_heading="Wedding Magazine"/>
-    <ProductFlipBook  text="A Wedding Souvenir covering all events and your precious memories "/>
+    <FlipbookContainer source={`https://iamyourstoryclint.el.r.appspot.com/api/downloadpdf/${fileId}`}/>
     <div style={{display:'flex',flexDirection:'column',gap:'30px',width:'100%'}}>
     <InfiniteIconMarquee info={info.bullets}/>
     <InfiniteMarquee />
