@@ -1,43 +1,291 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef ,useEffect} from "react";
 import "./login.css";
 
 import { MainHeading } from "../headings/heading";
 import { ButtonSecondary } from "../button/button";
+import pencil from './border_color.svg'
+
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
+
+import { isValidPhoneNumber } from "react-phone-number-input";
+import { getCountryCallingCode } from "react-phone-number-input";
+import { parsePhoneNumber } from "react-phone-number-input";
+import {useNavigate} from 'react-router-dom';
 
 export const Otp = () => {
   const [otpFields, setOtpFields] = useState(["", "", "", "", "", ""]);
   const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
   const [flag,setflag] = useState(0);
+  const [Value, setValue] = useState('');
+  const [seconds, setSeconds] = useState(60);
+  const [Verify,setVerify] = useState(0);
+  const navigate = useNavigate();
+  const startTimer = () => {
+    if (seconds > 0) {
+      setSeconds(seconds - 1);
+    
+    }
+  };
+ 
   const handleInputChange = (value, index) => {
-    if (!isNaN(value) && value >= 0 && value <= 9) {
+    // Check if the entered value is a number (0-9)
+   
+    if (/^[0-9]$/.test(value)) {
       // Update the corresponding OTP field
       const newOtpFields = [...otpFields];
       newOtpFields[index] = value;
       setOtpFields(newOtpFields);
-
-      // Move to the next input field if not the last one
-      if (index < 5 && value !== "") {
-        inputRefs[index + 1].current.focus();
+  
+      // Move to the next input field, regardless of whether it has a value
+      if (index < 5) {
+        // Check if the next input field already has a value
+        if (otpFields[index + 1] === "") {
+          inputRefs[index + 1].current.focus();
+        } else {
+          // Move to the next input field and insert the number
+          newOtpFields[index + 1] = value;
+          setOtpFields(newOtpFields);
+          inputRefs[index + 1].current.focus();
+        }
       }
     }
-  };
-
-  const handleBackspace = (index, event) => {
-    if (event.key === "Backspace" && index > 0 && otpFields[index] === "") {
-      // Move to the previous input field if backspace is pressed in an empty field
-      inputRefs[index - 1].current.focus();
+    else if(index<5)
+    {
+        const newOtpFields = [...otpFields];
+        newOtpFields[index+1] = value%10;
+        setOtpFields(newOtpFields);
+        inputRefs[index + 1].current.focus();
     }
   };
+  
+const handleBackspace = (index, event) => {
+  if (event.key === "Backspace" && index > 0) {
+    // Prevent the default backspace behavior (e.g., going back in the browser)
+    event.preventDefault();
 
-  const hide = ()=>
-  {
-      setflag(1);
+    // Clear the current OTP field
+    const newOtpFields = [...otpFields];
+    newOtpFields[index] = "";
+    setOtpFields(newOtpFields);
+    
+    
+
+    // Move to the previous input field
+    inputRefs[index - 1].current.focus();
+
+
   }
+  else if(index==0)
+  {
+    const newOtpFields = [...otpFields];
+    newOtpFields[index] = "";
+    setOtpFields(newOtpFields);
+    console.log(index)
+    // Move to the previous input field
+    inputRefs[0].current.focus();
+  }
+};
+  
+
+const hide = () => {
+
+  if (Value > 0) {
+    if (isValidPhoneNumber(Value)) {
+      // If the phone number is valid, set the 'flag' state to 1
+      setflag(1);
+      const country=parsePhoneNumber(Value).country;
+      const ccode = getCountryCallingCode(country);
+      
+      // Execute the POST request
+      const postData = {
+        phone: Value, 
+        country:country,
+        code:ccode,
+        type:true
+      };
+  
+      fetch('http://localhost:4000/api/sendOtp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Request was successful, handle the response here
+            return response.json();
+          } else {
+            // Request failed, handle errors here
+            alert('POST request failed');
+          }
+        })
+        .then((data) => {
+          // Handle the response data as needed
+          console.log(data);
+          
+         setSeconds(60);
+       
+        })
+        .catch((error) => {
+          // Handle network or other errors
+          console.error('Error:', error);
+        });
+    } else {
+      // If the phone number is not valid, show an alert
+      alert('Invalid phone number');
+    }
+  } else {
+    // If 'Value' is not greater than 0, show an alert
+    alert('Invalid phone number');
+  }
+};
+
+
+useEffect(() => {
+
+
+  const timer = setInterval(startTimer, 1000);
+
+  return () => {
+ 
+    clearInterval(timer);
+  };
+}, [seconds]);
+
 
   const unhide=()=>
   {
-    setflag(0);
+       setflag(0);
+   
   }
+
+  const verify=()=>
+  {
+   
+    const otp = otpFields.join('');
+    const postData = {
+      phone: Value, 
+      type:true,
+      pass:otp
+    };
+
+
+    fetch('http://localhost:4000/api/verify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify(postData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Request was successful, handle the response here
+          return response.json();
+        } else {
+          // Request failed, handle errors here
+          console.log('POST request failed');
+        }
+      })
+      .then((data) => {
+        // Handle the response data as needed
+        setVerify(data.success)
+        if(Verify)
+        {
+          fetch('http://localhost:4000/api/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(postData),
+            credentials: 'include'
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Request was successful, handle the response here
+                return response.json();
+              } else {
+                // Request failed, handle errors here
+                alert('POST request failed');
+              }
+            })
+            .then((data) => {
+              // Handle the response data as needed
+              console.log(data);
+              if(data.new)
+              { 
+                navigate('/registration')
+
+              }
+             setSeconds(60);
+           
+            })
+            .catch((error) => {
+              // Handle network or other errors
+              console.error('Error:', error);
+            });
+        }
+ 
+      })
+      .catch((error) => {
+        // Handle network or other errors
+        console.error('Error:', error);
+      });
+  
+  
+  
+
+  }
+
+
+  const resend=()=>
+  {
+    const otp = otpFields.join('');
+    const country=parsePhoneNumber(Value).country;
+    const ccode = getCountryCallingCode(country);
+    const postData = {
+      phone: Value, 
+      country:country,
+      type:true,
+      pass:otp
+    };
+
+
+    fetch('http://localhost:4000/api/resend', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Request was successful, handle the response here
+          return response.json();
+        } else {
+          // Request failed, handle errors here
+          alert('POST request failed');
+        }
+      })
+      .then((data) => {
+        // Handle the response data as needed
+        console.log(data);
+        setSeconds(60);
+      })
+      .catch((error) => {
+        // Handle network or other errors
+        console.error('Error:', error);
+      });
+  
+        
+
+  }
+
+
+
+
 
   return (
     <div className="body otp-page" style={{ marginTop: '100px' }}>
@@ -46,7 +294,12 @@ export const Otp = () => {
        <MainHeading name="Verify Phone Number" />
        {flag==0?<div className="input-group">
         <div className="lable">Enter Phone Number</div>
-        <input className="phone" type="number" />
+        <PhoneInput
+  international
+  countryCallingCodeEditable={false}
+  defaultCountry="IN"
+  value={Value}
+  onChange={setValue}/>
       </div>:null}
       {flag==0?<div className="bttn" onClick={hide}>
         <ButtonSecondary />
@@ -55,7 +308,7 @@ export const Otp = () => {
       <div className="input-group">
         <div className="text-wraper" style={{ margin: "0" }}>
           OTP sent to{" "}
-          <span className="link" onClick={unhide}> +91 790 590 4204 EDIT</span>
+          <span className="link" onClick={unhide}>{Value}<img src={pencil}></img></span>
         </div>
         <div className="otp-input-cont">
           {otpFields.map((value, index) => (
@@ -74,14 +327,14 @@ export const Otp = () => {
         </div>
       </div>:null
 }
-{flag?<div className="bttn">
+{flag?<div className="bttn" onClick={verify}>
         <ButtonSecondary />
       </div>
       :null
 }
 {flag?  <div className="text-wraper">
-        60 Seconds
-        <span className="link"> Resend OTP</span>
+<h5>Timer: {seconds} seconds</h5>
+    {seconds===0?<span className="link" onClick={resend}> Resend OTP</span>:null}
       </div>:null}
       <div style={{display:'flex',flexDirection:'column',gap:'30px',width:'100%'}}></div>
     </div>

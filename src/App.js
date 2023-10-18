@@ -8,6 +8,7 @@ import Product from './component/product/product';
 import { NavbarLanding } from './component/navbarLanding/navbar';
 import { PropertyFooterWrapper } from './component/footer/footer';
 import { Otp } from './component/login/login';
+import Form from './component/form/form';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/price" element={<Price/>} />
           <Route path="/plans" element={<Plan/>} />
           <Route path="/login" element={<Otp/>} />
+          <Route path="/registration" element={<Form/>}/>
         </Routes>
       </div>
       <PropertyFooterWrapper/>
