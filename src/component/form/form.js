@@ -93,6 +93,38 @@ const register=()=>
     .then((response) => {
       if (response.ok) {
         // Request was successful, handle the response here
+
+        fetch('http://localhost:4000/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(postData),
+          credentials: 'include'
+        })
+          .then((response) => {
+            if (response.ok) {
+              // Request was successful, handle the response here
+              return response.json();
+            } else {
+              // Request failed, handle errors here
+              alert('POST request failed');
+            }
+          })
+          .then((data) => {
+            // Handle the response data as needed
+            console.log(data);
+              
+         
+          })
+          .catch((error) => {
+            // Handle network or other errors
+            console.error('Error:', error);
+          });
+            
+
+
+
         return response.json();
       } else {
         // Request failed, handle errors here
