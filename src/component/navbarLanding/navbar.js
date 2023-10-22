@@ -82,13 +82,10 @@ export const NavOpen = ({ closeMenu,isMenuclosing }) => {
                         <NavLink exact to="/" className="text-wrapper" onClick={click} >HOME</NavLink>
                     </div>
                     <div className="frame-2">
-                        <NavLink exact to="/login" className="text-wrapper" onClick={click} >PRODUCT</NavLink>
+                        <NavLink exact to="/login" className="text-wrapper" onClick={click} >LOGIN</NavLink>
                     </div>
                     <div className="frame-2">
                         <NavLink exact to="/plans" className="text-wrapper" onClick={click}>CORPORATE PLANS</NavLink>
-                    </div>
-                    <div className="frame-2">
-                        <NavLink exact to="/price" className="text-wrapper" onClick={click}>PRICING</NavLink>
                     </div>
                 </div>
                 <div  className="text-wrapper-2">IMURS</div>

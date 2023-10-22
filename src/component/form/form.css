@@ -93,7 +93,32 @@
     background-color: #333332;
     color: #fff;
   }
+  .form input[type="file"] {
+    position: relative;
+  }
   
+  .form input[type="file"]::file-selector-button {
+    width: 136px;
+    color: transparent;
+  }
+  
+  
+  /* ------- From Step 1 ------- */
+  
+  /* file upload button */
+  .form input[type="file"]::file-selector-button {
+    display: none;
+  }
+  
+  /* file upload button hover state */
+  .form input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* file upload button active state */
+  .form input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+  }
 
 @media screen and (max-width :768px) {
     .form{

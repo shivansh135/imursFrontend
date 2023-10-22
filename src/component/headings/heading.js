@@ -18,3 +18,11 @@ export const HedingSubheding = (props) => {
         </div>
     );
 };
+
+export const SimpleHeading = ({text}) =>{
+    return (
+        <div className="simple-heading">
+            <div className="text-wrapper">{text}</div>
+        </div>
+    );
+}

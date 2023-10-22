@@ -102,10 +102,10 @@ const hide = () => {
         phone: Value, 
         country:country,
         code:ccode,
-        type:true
+        type:false
       };
   
-      fetch('http://localhost:4000/api/sendOtp', {
+      fetch('https://iamyourstoryclint.el.r.appspot.com//api/sendOtp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -163,16 +163,17 @@ useEffect(() => {
 
   const verify=()=>
   {
-   
+  
     const otp = otpFields.join('');
+    console.log(otp);
     const postData = {
       phone: Value, 
-      type:true,
+      type:false,
       pass:otp
     };
 
 
-    fetch('http://localhost:4000/api/verify', {
+    fetch('https://iamyourstoryclint.el.r.appspot.com//api/verify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -191,10 +192,10 @@ useEffect(() => {
       })
       .then((data) => {
         // Handle the response data as needed
-        setVerify(data.success)
-        if(Verify)
+     
+        if(data.success)
         {
-          fetch('http://localhost:4000/api/login', {
+          fetch('https://iamyourstoryclint.el.r.appspot.com//api/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -218,7 +219,12 @@ useEffect(() => {
               { 
                 navigate('/registration')
 
+              }else{
+                console.log('user data : ',data)
+                localStorage.setItem('hasReloaded', false);
+                navigate('/dashboard')
               }
+             
              setSeconds(60);
            
             })
@@ -253,7 +259,7 @@ useEffect(() => {
     };
 
 
-    fetch('http://localhost:4000/api/resend', {
+    fetch('https://iamyourstoryclint.el.r.appspot.com//api/resend', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -302,7 +308,7 @@ useEffect(() => {
   onChange={setValue}/>
       </div>:null}
       {flag==0?<div className="bttn" onClick={hide}>
-        <ButtonSecondary />
+        <ButtonSecondary text='Get OTP'/>
       </div>:null}
       {flag===1?
       <div className="input-group">
@@ -328,12 +334,12 @@ useEffect(() => {
       </div>:null
 }
 {flag?<div className="bttn" onClick={verify}>
-        <ButtonSecondary />
+        <ButtonSecondary text='Verify' />
       </div>
       :null
 }
 {flag?  <div className="text-wraper">
-<h5>Timer: {seconds} seconds</h5>
+<h5>Resend OTP in {seconds}s</h5>
     {seconds===0?<span className="link" onClick={resend}> Resend OTP</span>:null}
       </div>:null}
       <div style={{display:'flex',flexDirection:'column',gap:'30px',width:'100%'}}></div>

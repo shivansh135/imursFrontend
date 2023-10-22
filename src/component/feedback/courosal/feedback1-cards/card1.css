@@ -5,24 +5,11 @@
     gap: 20px;
     justify-content: center;
     position: relative;
-    margin: 30px;
 }
 
 .feedback-new .rectangle {
     height: auto;
-    object-fit: cover;
-    position: relative;
     width: 100%;
-}
-
-.feedback-new .div {
-    align-items: center;
-    display: inline-flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    position: relative;
 }
 
 .feedback-new .frame-2 {
@@ -34,16 +21,12 @@
 }
 
 .feedback-new .text-wrapper {
-    color: var(--jet-black);
-    font-family: var(--desktop-freight-big-pro-large-font-family);
-    font-size: var(--desktop-freight-big-pro-large-font-size);
-    font-style: var(--desktop-freight-big-pro-large-font-style);
-    font-weight: var(--desktop-freight-big-pro-large-font-weight);
-    letter-spacing: var(--desktop-freight-big-pro-large-letter-spacing);
-    line-height: var(--desktop-freight-big-pro-large-line-height);
-    margin-top: -1px;
-    position: relative;
-    width: fit-content;
+    color: var(--Jet-Black, #333332);
+    font-family: freight-big-pro, Helvetica, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .feedback-new .element-prestalo-onli {
@@ -57,7 +40,6 @@
     position: relative;
     text-align: center;
     width: auto;
-    padding: 20px;
 }
 
 .feedback-new .element-prestalo-onli-2 {
@@ -75,53 +57,36 @@
     width: fit-content;
 }
 
+.feedback-new .get{
+    
+color: var(--Jet-Black, #333332);
+font-family: 'HK Grotesk-RegularLegacy';
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%;
+letter-spacing: 0.2px;
+text-align: center;
+text-decoration-line: underline;
+}
+.feedback-new p{
+    margin: 0;
+    padding: 0;
+}
+
 @media screen and (max-width:760px) {
     .feedback-new {
-        align-items: center;
-        display: inline-flex;
-        flex-direction: column;
         gap: 10px;
-        justify-content: center;
-        position: relative;
-        margin: 15px;
-    }
-    
-    .feedback-new .rectangle {
-        height: auto;
-        object-fit: cover;
-        position: relative;
-        width: 100%;
-    }
-    
-    .feedback-new .div {
-        align-items: center;
-        display: inline-flex;
-        flex: 0 0 auto;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        position: relative;
-    }
-    
-    .feedback-new .frame-2 {
-        align-items: center;
-        display: inline-flex;
-        flex: 0 0 auto;
-        gap: 4px;
-        position: relative;
     }
     
     .feedback-new .text-wrapper {
-        color: var(--jet-black);
-        font-family: var(--desktop-freight-big-pro-large-font-family);
-        font-size: var(--desktop-freight-big-pro-large-font-size);
-        font-style: var(--desktop-freight-big-pro-large-font-style);
-        font-weight: var(--desktop-freight-big-pro-large-font-weight);
-        letter-spacing: var(--desktop-freight-big-pro-large-letter-spacing);
-        line-height: var(--desktop-freight-big-pro-large-line-height);
-        margin-top: -1px;
-        position: relative;
-        width: fit-content;
+        color: var(--Jet-Black, #333332);
+        text-align: center;
+        font-family: FreightBig Pro;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
     
     .feedback-new .element-prestalo-onli {
@@ -137,21 +102,22 @@
         width: auto;
         padding: 10px;
     }
-    .feedback-new p{
-        margin: 0;
-    }
+
     .feedback-new .element-prestalo-onli-2 {
-        color: var(--jet-black);
-        font-family: "HK Grotesk-SemiBoldLegacy Italic", Helvetica;
-        font-size: 12px;
-        font-style: italic;
-        font-weight: 600;
-        letter-spacing: 0.2px;
-        line-height: normal;
-        position: relative;
+        color: var(--Jet-Black, #333332);
         text-align: center;
-        text-decoration: underline;
-        white-space: nowrap;
-        width: fit-content;
+        font-family: HK Grotesk;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0%; /* 0px */
+    }
+    .feedback-new .get{
+        color: var(--Jet-Black, #333332);
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: underline;
     }
 }

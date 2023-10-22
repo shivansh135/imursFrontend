@@ -8,7 +8,7 @@ export const DecorCard = () => {
         <div className="container-desktop">
             <div className="decor-card">
                 <div className="img-cont">
-                    <img className="img" alt="Img" src="decor.png" />
+                    <img className="img" alt="Img" src="Living_Room.png" />
                 </div>
                 <div className="cont">
                     <div className="headin">
@@ -17,28 +17,26 @@ export const DecorCard = () => {
                     </div>
                     <div className="text-wrap">
                         <p className="text">
-                            She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
-                            everyday.
+                        She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories, everyday.
                         </p>
-                        <ButtonSecondary text={'Renovate Yours'}/>
+                        <ButtonSecondary text={'Renovate Yours Living Room'}/>
                     </div>
                 </div>
             </div>
             <div className="decor-card">
                 <div className="img-cont">
-                    <img className="img" alt="Img" src="decor.png" />
+                    <img className="img" alt="Img" src="Bed_Room.png" />
                 </div>
                 <div className="cont">
                     <div className="headin">
                         <div className="name">Rishika’s</div>
-                        <div className="catigory">Living Room</div>
+                        <div className="catigory">Bed Room</div>
                     </div>
                     <div className="text-wrap">
                         <p className="text">
-                            She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
-                            everyday.
+                        She used her wedding magazine as a decor element on side table and cherishes her wedding memories, everyday.
                         </p>
-                        <ButtonSecondary text={'Renovate Yours'}/>
+                        <ButtonSecondary text={'Renovate Yours Bed Room'}/>
                     </div>
                 </div>
             </div>
@@ -53,7 +51,7 @@ export const DecorCard = () => {
                 <div class="carousel-item active">
                     <div className="decor-card">
                     <div className="img-cont">
-                        <img className="img" alt="Img" src="decor.png" />
+                        <img className="img" alt="Img" src="Living_Room.png" />
                     </div>
                     <div className="cont">
                         <div className="headin">
@@ -65,7 +63,7 @@ export const DecorCard = () => {
                                 She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
                                 everyday.
                             </p>
-                            <ButtonSecondary text={'Renovate Yours'}/>
+                            <ButtonSecondary text={'Renovate Yours living room'}/>
                         </div>
                     </div>
                 </div>
@@ -73,19 +71,18 @@ export const DecorCard = () => {
                 <div class="carousel-item">
                     <div className="decor-card">
                     <div className="img-cont">
-                        <img className="img" alt="Img" src="decor.png" />
+                        <img className="img" alt="Img" src="Bed_Room.png" />
                     </div>
                     <div className="cont">
                         <div className="headin">
                             <div className="name">Ridhima's</div>
-                            <div className="catigory">Living Room</div>
+                            <div className="catigory">Bed Room</div>
                         </div>
                         <div className="text-wrap">
                             <p className="text">
-                                She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
-                                everyday.
+                            She used her wedding magazine as a decor element on side table and cherishes her wedding memories, everyday.
                             </p>
-                            <ButtonSecondary text={'Renovate Yours'}/>
+                            <ButtonSecondary text={'Renovate Yours Bed Room'}/>
                         </div>
                     </div>
                     </div>

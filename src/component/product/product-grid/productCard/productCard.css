@@ -54,7 +54,9 @@
     gap: 8px;
     position: relative;
 }
-
+p{
+    margin: 0;
+}
 .product .div {
     color: var(--newjet-black);
     font-family: "HK Grotesk-SemiBoldLegacy", Helvetica;
@@ -81,8 +83,8 @@
     .product{
         gap:8px;
     }
-    .text-wrap{
-        gap: 18px !important;
+    .product .text-wrap{
+        gap: 12px !important;
     }
     .product .image{
         width: 133px;
@@ -107,5 +109,8 @@
         position: relative;
         width: 16px;
 
+    }
+    .product.text-wrap{
+        gap: 14px;
     }
 }

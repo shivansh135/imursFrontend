@@ -73,7 +73,6 @@ export const Home = () => {
         </div>
         
 
-        <MainHeading name="Nostalgia Champions"/>
 
         
   <Courosal  />

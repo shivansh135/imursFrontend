@@ -2,23 +2,21 @@ import PropTypes from "prop-types";
 import React from "react";
 import "./card1.css";
 
-export const FeedbackNew = () => {
+export const FeedbackNew = ({name,text,city,img}) => {
     return (
         <div className="feedback-new">
-            <img className="rectangle" alt="Rectangle" src="sampleSquare.jpg" />
-            <div className="div">
+            <img className="rectangle" alt="Rectangle" src={`${img}`}/>
                 <div className="frame-2">
-                    <div className="text-wrapper">Rajesh Singh</div>
+                    <div className="text-wrapper">{name}</div>
                 </div>
                 <p className="element-prestalo-onli">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem d typesetting ind
+                    {text}
                 </p>
-                <div className="element-prestalo-onli-2">Get Souvenir</div>
-            </div>
+            <div className="get">{city}</div>
         </div>
     );
 };
 
 FeedbackNew.propTypes = {
-    rectangle: PropTypes.string,
+    rectangle: PropTypes.string, 
 };

@@ -16,6 +16,9 @@
     object-fit: cover;
     position: relative;
     width: 469px;
+    background-size: 0 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .flipbook-container-product .cont {
@@ -80,7 +83,7 @@
 
     .flipbook-container-product .flipbook {
         width: 210px;
-        height: auto;
+        height: 297px;
     }
     .flipbook-container-product .heading {
         color: var(--new-jet-black, #333332);
@@ -113,6 +116,9 @@
     .flipbook-container-product .price{
         font-size: 12px;
         font-weight: 600;
+    }
+    .flipbook-container-product .text-wrap {
+        margin-bottom: 16px;
     }
     
 }

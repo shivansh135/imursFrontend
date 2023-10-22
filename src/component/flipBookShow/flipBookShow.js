@@ -55,7 +55,7 @@ export const FlipbookContainer = (props) => {
       setTimeout(() => {
         document.querySelector('.df-ui-next').click();
       }, 800);
-    }, 20);
+    }, 20000);
   };
 
   return (

@@ -2,7 +2,7 @@
     align-items: center;
     background-color: var(--jet-black);
     display: flex;
-    gap: 20px 20px;
+    gap: 50px 20px;
     padding: 60px;
     position: relative;
     flex-wrap: wrap;
@@ -27,10 +27,8 @@
 }
 
 .partner .heading {
-    align-self: stretch;
     color: var(--isabeline);
-    font-family: freight-big-pro
-, Helvetica;
+    font-family: freight-big-pro, Helvetica;
     font-size: 48px;
     font-weight: 400;
     letter-spacing: 0;
@@ -55,7 +53,7 @@
     text-align: left;
 }
 
-.partner .button-secondary {
+/* .partner .button-secondary {
     align-items: center;
     border: 1px solid;
     border-color: var(--isabeline);
@@ -66,7 +64,7 @@
     padding: 20px 40px;
     position: relative;
     width: auto;
-}
+} */
 
 .partner .become-a-partner {
     color: var(--isabeline);
@@ -84,6 +82,8 @@
 @media screen and (max-width:768px) {
     .partner {
         padding: 40px 20px;
+    gap: 40px 20px;
+
     }
     
     .partner .img {
@@ -100,7 +100,7 @@
     }
     
     .partner .heading {
-        font-size: 22px;
+        font-size: 27px;
         text-align: center;
         width: 100%;
     }
@@ -112,7 +112,7 @@
         line-height: 14px;
     }
     
-    .partner .button-secondary {
+    /* .partner .button-secondary {
         display: flex;
         padding: 12px 20px;
         justify-content: center;
@@ -121,7 +121,7 @@
         font-size: 12px;
         width: fit-content;
         margin: auto;
-    }
+    } */
 
     .partner .become-a-partner {
         font-size: 10px;

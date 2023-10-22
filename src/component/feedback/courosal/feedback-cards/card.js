@@ -51,3 +51,12 @@ const Ayush = props.info;
         </div>
     );
 };
+
+export const Feedback_V3 = () =>{
+    return(
+        <div className="feedback_v3">
+            <img src="frameBG_P.jpg" alt='feed_back' className="feedbackimg"/>
+            
+        </div>
+    );
+}

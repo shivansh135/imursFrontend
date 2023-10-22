@@ -1,3 +1,6 @@
+.PhoneInputCountry{
+    display: none !important;
+}
 .otp-page .input-group{
     width: fit-content;
     margin: auto;
@@ -84,6 +87,13 @@ input[type=number] {
 }
 
 @media screen and (max-width: 768px) {
+    .otp-page .PhoneInputInput {
+        width: 270px !important;
+        border: 1px solid var(--Jet-Black, #333332) !important;
+        height: 44px !important;
+        overflow: hidden !important;
+        outline: none !important;
+    }
     .otp-page .otp-input-cont {
         align-items: flex-start;
         display: flex;
@@ -126,6 +136,6 @@ input[type=number] {
     .otp-page .bttn{
         width: fit-content;
         margin: auto;
-        margin-top: -30px;
+        margin-top: -10px;
     }
 }

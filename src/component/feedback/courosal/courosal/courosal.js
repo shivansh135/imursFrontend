@@ -1,68 +1,59 @@
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 
-import React from "react";
-import Slider from "react-slick";
-import { FeedbackNew } from "../feedback1-cards/card1";
-import './courosal.css'
-const Courosal = () => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+import './courosal.css';
 
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { FeedbackNew } from '../feedback1-cards/card1';
+import { MainHeading } from '../../../headings/heading';
+
+export default function Courosal() {
   return (
-    <div style={{marginLeft:"10%",marginRight:"10%",display:"flex",justifyContent:"center",flexDirection:"column"}}>
-      <Slider {...settings}>
-        <div>
-          <h3><FeedbackNew/></h3>
-        </div>
-        <div>
-          <h3><FeedbackNew/></h3>
-        </div>  <div>
-          <h3><FeedbackNew/></h3>
-        </div>  <div>
-          <h3><FeedbackNew/></h3>
-        </div>  <div>
-          <h3><FeedbackNew/></h3>
-        </div>  <div>
-          <h3><FeedbackNew/></h3>
-        </div>
-      </Slider>
+    <div style={{marginTop:'40px'}}>
+        <MainHeading name="Nostalgia Champions"/>
+
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 5,
+          stretch: 0,
+          depth: 10,
+          modifier: 1,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <FeedbackNew name="Mahi & Siddharth" img="feedbackimages/mahi_&_Siddharth.jpg" text="Reliving our special day through its pages brought tears and joy. Grateful!" city="Get Suvenir"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <FeedbackNew name="Harshita & Akhil" img="feedbackimages/Harshita_&_Akhil.jpg" text="Each page captured our love story perfectly. Cherished memories beautifully preserved!" city="Get Suvenir"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <FeedbackNew name="Nitya and Shivam" img="feedbackimages/Nitya_&_Shivam.jpeg"  text="Our memories turned into a beautiful tangible keepsake. Loved this concept" city="Get Suvenir"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <FeedbackNew name="Namita & Akshay" img="feedbackimages/Namita_&_Akshay.jpg"  text="Imurs exceeded expectations, beautifully curated. It's our love story in print!" city="Get Suvenir"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <FeedbackNew name="Jasmine & Siddharth" img="feedbackimages/Jasmine_&_Siddharth.jpg"  text="A heartfelt journey through memories on our coffee table. Thankful to Crescent Studios and Imurs for this." city="Get Suvenir"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <FeedbackNew name="Sahiba & Mayank" img="feedbackimages/Mayank_&_Sahiba.jpg"  text="Every page radiated our love story—it's more than a keepsake; it's priceless joy!" city="Get Suvenir"/>
+        </SwiperSlide>
+      </Swiper>
+       
     </div>
   );
-};
-
-export default Courosal;
-
+}

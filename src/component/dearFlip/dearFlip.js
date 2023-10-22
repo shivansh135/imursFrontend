@@ -45,6 +45,7 @@ class Flipbook extends Component {
       allControls: "",
       pageMode: 1,
       singlePageMode: 1,
+      
     };`;
     script3.onload = this.initializeFlipbook; // Call initialization function once the script is loaded
     document.head.appendChild(script3);

@@ -4,7 +4,7 @@
 }
 
 .marquee-cont-icon{
-  padding: 15px;
+  padding: 0px;
 }
 
 
@@ -32,9 +32,16 @@
   .marquee .star {
     position: relative;
     animation: rotate 2.5s normal linear infinite;
+    width: 28px;
+    height: auto;
   }
+
   .marquee-cont-icon .star{
     animation: none;
+  }
+
+  .marquee-cont-icon .marquee{
+    flex-direction: row-reverse;
   }
 
   .marquee-cont-icon .text-wrapper{
@@ -46,6 +53,21 @@
     font-weight: 600;
     line-height: normal;
   }
+
+  .colab-marquee{
+    display: flex;
+    gap: 60px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .colab-marquee .colab-logo{
+      height: 80px;
+      width: auto;
+      filter: brightness(0.2);
+      opacity: 0.5;
+  }
+
   @media screen and (max-width: 768px) {
     .marquee-cont{
       background-color: var(--jet-black);
@@ -78,6 +100,17 @@
       font-weight: 600;
       line-height: normal;
     }
+    .colab-marquee{
+      width: 100%;
+    }
+    .colab-marquee .colab-logo{
+      height: 50px;
+      width: auto;
+  }
+  .colab-marquee{
+    display: flex;
+    gap: 30px;
+  }
   }
   
   @keyframes rotate {

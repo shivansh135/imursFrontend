@@ -15,6 +15,23 @@
     top: 0;
 }
 
+.simple-heading {
+    width: 100%;
+}
+
+.simple-heading .text-wrapper {
+    color: var(--jet-black);
+    font-family: 'HK Grotesk-MediumLegacy';
+    font-size: 28px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 76.8px;
+    position: relative;
+    text-align: left;
+    top: 0;
+}
+
 .heding-subheding {
     align-items: center;
     display: flex;
@@ -65,11 +82,14 @@
         margin-left: 20%;
     }
     .heding-subheding .headding{
-        font-size: 20px;
+        font-size: 27px;
         line-height: 21px;
     }
     .heding-subheding .sub-heading{
         font-size: 12px;
         line-height: 21px;
+    }
+    .simple-heading .text-wrapper {
+        font-size: 20px;
     }
 }
