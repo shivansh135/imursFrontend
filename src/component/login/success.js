@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-
+import './success.css'
+import { MainHeading } from '../headings/heading';
 export default function Success() {
   useEffect(() => {
     // Check if the page has been reloaded before
@@ -13,8 +14,11 @@ export default function Success() {
   }, []);
 
   return (
-    <div>
-      <h1>Welocome</h1>
+    <div className='body'>
+
+        <MainHeading name="Loading..."/>
+        <img className='Welcome_logo' alt="ImUrs" src='imurs_logo.png' />
+        <MainHeading name="Please Wait"/>
     </div>
   );
 }

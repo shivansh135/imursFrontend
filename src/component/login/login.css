@@ -85,7 +85,10 @@ input[type=number] {
     text-decoration: underline;
     opacity: 0.5;
 }
-
+.link .pencil{
+    width: 20px;
+    height: auto;
+}
 @media screen and (max-width: 768px) {
     .otp-page .PhoneInputInput {
         width: 270px !important;
@@ -137,5 +140,9 @@ input[type=number] {
         width: fit-content;
         margin: auto;
         margin-top: -10px;
+    }
+    .link .pencil{
+        width: 10px;
+        height: auto;
     }
 }

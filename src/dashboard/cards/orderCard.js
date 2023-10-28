@@ -20,7 +20,7 @@ export const OrderCard = () => {
                 <div className="status">
                     <div className="hedding">ORDER STATUS</div>
                     <div className="flex-text">
-                        <img className="icon" alt="Icon" src="icon.png" />
+                        <img className="icon" alt="Icon" src="tick.svg" />
                         <div className="text">READY</div>
                     </div>
                 </div>

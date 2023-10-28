@@ -1,14 +1,16 @@
 import PropTypes from "prop-types";
 import React from "react";
 import "./button.css";
+import { NavLink } from "react-router-dom";
 
-export const ButtonSecondary = ({ className, customStyle,text }) => {
+export const ButtonSecondary = ({ className, customStyle, text, direction, to }) => {
   return (
-    <div className={`button-secondary ${className}`} style={customStyle}>
+    <NavLink to={direction ? to : ''} className={`button-secondary ${className}`} style={customStyle}>
       <div className="text-wrapper">{text || "order now"}</div>
-    </div>
+    </NavLink>
   );
 };
+
 
 
 ButtonSecondary.propTypes = {

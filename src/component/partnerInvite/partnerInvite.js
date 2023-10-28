@@ -31,7 +31,7 @@ export const PartnerInvite = () => {
                 </p>
             </div>
             <ColabrationMarquee/>
-            <ButtonSecondary text={'Become a partner'}/>
+            <ButtonSecondary direction={true} to="/login" text={'Become a partner'}/>
         </div>
     );
 };

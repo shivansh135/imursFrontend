@@ -38,8 +38,9 @@ function Profile_Settings(props) {
     return (
       <Dashboard data={props.data}>
         <div className='body'>
-        <SimpleHeading text = "Profile Settings"/>
         <div className='form'>
+        <SimpleHeading text = "Profile Settings"/>
+        
         <div className='uplodePhoto'>
             <label className='profileLable' for='profilePhoto'>
                 <img src='icons/upload.svg' alt='upload'/>

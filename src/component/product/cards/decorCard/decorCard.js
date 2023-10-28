@@ -19,7 +19,7 @@ export const DecorCard = () => {
                         <p className="text">
                         She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories, everyday.
                         </p>
-                        <ButtonSecondary text={'Renovate Yours Living Room'}/>
+                        <ButtonSecondary direction={true} to="/plans" text={'Renovate Yours Living Room'}/>
                     </div>
                 </div>
             </div>
@@ -36,19 +36,19 @@ export const DecorCard = () => {
                         <p className="text">
                         She used her wedding magazine as a decor element on side table and cherishes her wedding memories, everyday.
                         </p>
-                        <ButtonSecondary text={'Renovate Yours Bed Room'}/>
+                        <ButtonSecondary direction={true} to="/plans" text={'Renovate Yours Bed Room'}/>
                     </div>
                 </div>
             </div>
         </div>
         <div className="container-mobile">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" >
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style={{filter:"brightness(0%)",width:"40px",height:"1px"}}></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style={{filter:"brightness(0%)",width:"40px",height:"1px"}}></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="6000">
                     <div className="decor-card">
                     <div className="img-cont">
                         <img className="img" alt="Img" src="Living_Room.png" />
@@ -63,12 +63,12 @@ export const DecorCard = () => {
                                 She used her wedding magazine as a decor element on her coffee table and cherishes her wedding memories,
                                 everyday.
                             </p>
-                            <ButtonSecondary text={'Renovate Yours living room'}/>
+                            <ButtonSecondary direction={true} to="/plans" text={'Renovate Yours living room'}/>
                         </div>
                     </div>
                 </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="6500">
                     <div className="decor-card">
                     <div className="img-cont">
                         <img className="img" alt="Img" src="Bed_Room.png" />
@@ -82,7 +82,7 @@ export const DecorCard = () => {
                             <p className="text">
                             She used her wedding magazine as a decor element on side table and cherishes her wedding memories, everyday.
                             </p>
-                            <ButtonSecondary text={'Renovate Yours Bed Room'}/>
+                            <ButtonSecondary direction={true} to="/plans" text={'Renovate Yours Bed Room'}/>
                         </div>
                     </div>
                     </div>

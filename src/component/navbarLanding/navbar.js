@@ -50,8 +50,8 @@ export const NavbarLanding = () => {
            </div>
 
           { /* <i className='fa-solid fa-bars menu' ></i>*/}
-            <NavLink exact to="/" className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>ImUrs</NavLink>
-            <ButtonSecondary className="hidden"/>
+            <NavLink exact to="/" className="navTitle" style={{color:currentPathname==='/'?"var(--isabeline)":"var(--jet-black)"}}>imurs</NavLink>
+            <ButtonSecondary direction={true} to="/plans" className="hidden"/>
             
             {/* Pass the closeMenu function as a prop */}
             {isMenuOpen && <NavOpen closeMenu={closeMenu} isMenuclosing={isMenuclosing} />}
@@ -88,9 +88,8 @@ export const NavOpen = ({ closeMenu,isMenuclosing }) => {
                         <NavLink exact to="/plans" className="text-wrapper" onClick={click}>CORPORATE PLANS</NavLink>
                     </div>
                 </div>
-                <div  className="text-wrapper-2">IMURS</div>
+                <div  className="text-wrapper-2">imurs</div>
             </div>
-            <img className="star" alt="Star" src="star-5.png" />
         </div>
     );
 };

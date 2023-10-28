@@ -6,7 +6,7 @@ import React from "react";
 export const Tag_1 = (props) => {
     return (
         <div className="tag1">
-            <div className="text-wrapper">Hello {props.data.name}</div>
+            <div className="text-wrapper">Hello {props.data.name.split(' ')[0]}</div>
             <div className="div">Welcome Back!</div>
         </div>
     );

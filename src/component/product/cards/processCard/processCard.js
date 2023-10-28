@@ -9,16 +9,16 @@ export const ProcessContainer = () => {
                 <div className="title">Twelve Minute Process</div>
              </div>
              <>
-             <div id="carouselExampleIndicators" class="carousel slide" style={{maxWidth:'720px'}}>
+             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style={{maxWidth:'720px'}}>
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style={{height:'1px',with:'40px'}}></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style={{height:'1px',width:'40px'}}></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" data-bs-interval="4000">
       <img src="camera.jpg" class="d-block w-100" alt="..."/>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" data-bs-interval="4000">
       <img src="mic.jpg" class="d-block w-100" alt="..."/>
     </div>
   </div>

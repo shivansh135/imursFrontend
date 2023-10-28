@@ -38,6 +38,7 @@ class Flipbook extends Component {
         "overwritePDFOutline": "true",
       autoEnableOutline: "false",
       forceFit:true,
+      webgl: true,
       outline:[],
       color3DCover:"#f7f5f2",
       hard: "none",
@@ -45,6 +46,12 @@ class Flipbook extends Component {
       allControls: "",
       pageMode: 1,
       singlePageMode: 1,
+      onReady: function (flipBook) {
+        const prodFlipbook = document.querySelector('#prod-flipbook');
+            if (prodFlipbook) {
+                prodFlipbook.style.backgroundImage = "none";
+            }
+      },
       
     };`;
     script3.onload = this.initializeFlipbook; // Call initialization function once the script is loaded

@@ -51,11 +51,11 @@ export default function Plan() {
 
 
   useEffect(() => {
-    fetch("https://iamyourstoryclint.el.r.appspot.com/api/b2bpricing")
+    fetch(process.env.REACT_APP_API_URL +"api/b2bpricing")
       .then((response) => response.json())
       .then((data) => {
 
-
+      console.log(process.env.REACT_APP_API_URL +"/api/b2bpricing",data)
 
         const iconicBundles = data.pricingData.filter((item) => item.name === "imurs iconic");
         const perMagazineValues = iconicBundles.map((bundle) => bundle.perMagazine);
@@ -92,9 +92,8 @@ export default function Plan() {
 
 
   return (
-    <>
+    <div className='body'>
     <div className="plan-corporate" style={{display:"flex",justifyContent:"center"}}>   <Corporate bundles={bundlesData} onMagazineSelect={handleMagazineSelect} /></div>
-    <div style={{ marginTop: "100px" }} />
     <div className="plan-cards-flex">
   {selectedMagazine ? (
     <>
@@ -105,8 +104,7 @@ export default function Plan() {
   ) : null}
 </div>
 
-    <div style={{ marginTop: "100px" }} />
-    </>
+    </div>
   )
 }
 

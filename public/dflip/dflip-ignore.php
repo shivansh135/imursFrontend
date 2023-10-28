@@ -4,7 +4,7 @@
  * Plugin Name: DearFlip 3D FlipBook
  * Description: Create Realistic 3D Flip-books using jQuery
  *
- * Version: 2.0.65
+ * Version: 2.0.83
  * Update URI: https://api.freemius.com
  *
  * Text Domain: DFLIP

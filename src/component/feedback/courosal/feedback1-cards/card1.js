@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import "./card1.css";
+import { NavLink } from "react-router-dom";
 
 export const FeedbackNew = ({name,text,city,img}) => {
     return (
@@ -12,7 +13,7 @@ export const FeedbackNew = ({name,text,city,img}) => {
                 <p className="element-prestalo-onli">
                     {text}
                 </p>
-            <div className="get">{city}</div>
+            <NavLink exact to="/login" className="get">{city}</NavLink>
         </div>
     );
 };

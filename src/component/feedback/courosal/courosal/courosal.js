@@ -24,6 +24,7 @@ export default function Courosal() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
+        loop={true}
         coverflowEffect={{
           rotate: 5,
           stretch: 0,
@@ -35,22 +36,22 @@ export default function Courosal() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <FeedbackNew name="Mahi & Siddharth" img="feedbackimages/mahi_&_Siddharth.jpg" text="Reliving our special day through its pages brought tears and joy. Grateful!" city="Get Suvenir"/>
+          <FeedbackNew name="Mahi & Siddharth" img="feedbackimages/mahi_&_Siddharth.jpg" text="Reliving our special day through its pages brought tears and joy. Grateful!" city="Get Souvenir"/>
         </SwiperSlide>
         <SwiperSlide>
-          <FeedbackNew name="Harshita & Akhil" img="feedbackimages/Harshita_&_Akhil.jpg" text="Each page captured our love story perfectly. Cherished memories beautifully preserved!" city="Get Suvenir"/>
+          <FeedbackNew name="Harshita & Akhil" img="feedbackimages/Harshita_&_Akhil.jpg" text="Each page captured our love story perfectly. Cherished memories beautifully preserved!" city="Get Souvenir"/>
         </SwiperSlide>
         <SwiperSlide>
-          <FeedbackNew name="Nitya and Shivam" img="feedbackimages/Nitya_&_Shivam.jpeg"  text="Our memories turned into a beautiful tangible keepsake. Loved this concept" city="Get Suvenir"/>
+          <FeedbackNew name="Nitya and Shivam" img="feedbackimages/Nitya_&_Shivam.jpeg"  text="Our memories turned into a beautiful tangible keepsake. Loved this concept" city="Get Souvenir"/>
         </SwiperSlide>
         <SwiperSlide>
-          <FeedbackNew name="Namita & Akshay" img="feedbackimages/Namita_&_Akshay.jpg"  text="Imurs exceeded expectations, beautifully curated. It's our love story in print!" city="Get Suvenir"/>
+          <FeedbackNew name="Namita & Akshay" img="feedbackimages/Namita_&_Akshay.jpg"  text="Imurs exceeded expectations, beautifully curated. It's our love story in print!" city="Get Souvenir"/>
         </SwiperSlide>
         <SwiperSlide>
-          <FeedbackNew name="Jasmine & Siddharth" img="feedbackimages/Jasmine_&_Siddharth.jpg"  text="A heartfelt journey through memories on our coffee table. Thankful to Crescent Studios and Imurs for this." city="Get Suvenir"/>
+          <FeedbackNew name="Jasmine & Siddharth" img="feedbackimages/Jasmine_&_Siddharth.jpg"  text="A heartfelt journey through memories on our coffee table. Thankful to Crescent Studios and Imurs for this." city="Get Souvenir"/>
         </SwiperSlide>
         <SwiperSlide>
-          <FeedbackNew name="Sahiba & Mayank" img="feedbackimages/Mayank_&_Sahiba.jpg"  text="Every page radiated our love story—it's more than a keepsake; it's priceless joy!" city="Get Suvenir"/>
+          <FeedbackNew name="Sahiba & Mayank" img="feedbackimages/Mayank_&_Sahiba.jpg"  text="Every page radiated our love story—it's more than a keepsake; it's priceless joy!" city="Get Souvenir"/>
         </SwiperSlide>
       </Swiper>
        

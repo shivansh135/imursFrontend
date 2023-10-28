@@ -15,32 +15,30 @@ function FormGroup(props) {
         <span className="sequence">{sequence}</span>
         {label}
       </div>
-      { <input
-          type={`${inputType}`}
-          name={name}
-          value={value}
-          id={id}
-          onChange={onChange}
-        />}
+      {inputType !== 'none' ? (
+        <input type={inputType} name={name} value={value} id={id} onChange={onChange} />
+      ) : null}
+
     </div>
   );
 }
-
 function RadioGroup(props) {
   const { options, name, value, onChange } = props;
 
+  if (options.length === 0) {
+    return null; // Return null when options are empty
+  }
+
   return (
     <div className="button-radio" style={{ marginTop: '15px' }}>
-      {options.map((option, index) => 
-  
-        (
+      {options.map((option, index) => (
         <div key={index}>
           <input
             type="radio"
             id={`radio${index}`}
             name={name}
             value={option}
-            checked={value === option} // Set the checked status based on the current value
+            checked={value === option}
             onChange={onChange}
           />
           <label htmlFor={`radio${index}`}>{option.split('-')[1]}</label>
@@ -49,6 +47,7 @@ function RadioGroup(props) {
     </div>
   );
 }
+
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -73,7 +72,7 @@ function Form() {
 
   useEffect(() => {
     // Fetch the data from the API when the component mounts
-    fetch('https://iamyourstoryclint.el.r.appspot.com//api/partnertype')
+    fetch(process.env.REACT_APP_API_URL+'api/partnertype')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -112,7 +111,7 @@ function Form() {
     formDataToSubmit.append('type', type.split('-')[0]);
     formDataToSubmit.append('logo', logo); // Append the logo file
   
-    fetch('https://iamyourstoryclint.el.r.appspot.com//api/registerpatner', {
+    fetch(process.env.REACT_APP_API_URL+'api/registerpatner', {
       method: 'POST',
       body: formDataToSubmit,
       credentials: 'include',
@@ -121,7 +120,7 @@ function Form() {
         if (response.ok) {
           // Request was successful, handle the response here
   
-          fetch('https://iamyourstoryclint.el.r.appspot.com//api/login', {
+          fetch(process.env.REACT_APP_API_URL+'api/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -167,6 +166,7 @@ function Form() {
   
 
 
+  console.log(names)
 
 
     return (
@@ -181,16 +181,14 @@ function Form() {
         <FormGroup sequence="03" label="Email" inputType="text" name="email" value={formData.email} onChange={handleInputChange} id='email' />
         <FormGroup sequence="04" label="Uplode Brand Logo ?" name="logo" inputType="file" id='logo'/>
         </div>
-        <FormGroup sequence="05" label="What's your brand name ?" inputType="radio" />
+        <FormGroup sequence="05" label="Select Your Category" inputType="none" />
         <RadioGroup
         options={names}
         name="type"
         value={formData.type}
-       
         onChange={handleInputChange}
       />
-        <div onClick={register}><ButtonSecondary  /></div>
-        
+        <div onClick={register}><ButtonSecondary text="Register" /></div>
         
        
         <div style={{marginBottom:'50px'}}></div>

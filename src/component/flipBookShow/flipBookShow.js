@@ -66,7 +66,7 @@ export const FlipbookContainer = (props) => {
 
         </div>
         <div style={{position:'relative',margin:'auto',width:'fit-content'}}>
-        <ButtonSecondary text={'order now'}/>
+        <ButtonSecondary direction={true} to="/plans" text={'order now'}/>
         </div>
     </div>
       <div id='cover' className={`flipbook-container  ${showIframe?'':'absolute'}`}>
@@ -81,7 +81,6 @@ export const FlipbookContainer = (props) => {
           </div>
           <div className="center" style={{width:'fit-content'}} onClick={handleButtonClick}>
           <ButtonSecondary text={'tap to customize'} />
-
           </div>
 
         </div>

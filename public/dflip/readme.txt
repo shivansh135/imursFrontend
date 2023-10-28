@@ -1,5 +1,5 @@
 === dFlip 3D Flipbook ===
-Contributors: dearhive
+Contributors: dearhive, freemius
 Tags: flipbook, 3d flipbook, pdf viewer, pdf, pdf flipbook, pdf embed
 Requires at least: 3.0.1
 Tested up to: 5.4

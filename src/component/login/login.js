@@ -12,6 +12,7 @@ import { isValidPhoneNumber } from "react-phone-number-input";
 import { getCountryCallingCode } from "react-phone-number-input";
 import { parsePhoneNumber } from "react-phone-number-input";
 import {useNavigate} from 'react-router-dom';
+import Popup from "../popup/popup";
 
 export const Otp = () => {
   const [otpFields, setOtpFields] = useState(["", "", "", "", "", ""]);
@@ -104,8 +105,8 @@ const hide = () => {
         code:ccode,
         type:false
       };
-  
-      fetch('https://iamyourstoryclint.el.r.appspot.com//api/sendOtp', {
+      console.log(process.env.REACT_APP_API_URL+'api/sendOtp')
+      fetch(process.env.REACT_APP_API_URL+'api/sendOtp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -123,6 +124,8 @@ const hide = () => {
         })
         .then((data) => {
           // Handle the response data as needed
+          setOTP_Valse(data.pass)
+        setShowPopup(true)
           console.log(data);
           
          setSeconds(60);
@@ -173,7 +176,7 @@ useEffect(() => {
     };
 
 
-    fetch('https://iamyourstoryclint.el.r.appspot.com//api/verify', {
+    fetch(process.env.REACT_APP_API_URL+'api/verify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -195,7 +198,7 @@ useEffect(() => {
      
         if(data.success)
         {
-          fetch('https://iamyourstoryclint.el.r.appspot.com//api/login', {
+          fetch(process.env.REACT_APP_API_URL+'api/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -259,7 +262,7 @@ useEffect(() => {
     };
 
 
-    fetch('https://iamyourstoryclint.el.r.appspot.com//api/resend', {
+    fetch(process.env.REACT_APP_API_URL+'api/resend', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -278,6 +281,8 @@ useEffect(() => {
       .then((data) => {
         // Handle the response data as needed
         console.log(data);
+        setOTP_Valse(data.pass)
+        setShowPopup(true)
         setSeconds(60);
       })
       .catch((error) => {
@@ -289,14 +294,22 @@ useEffect(() => {
 
   }
 
-
-
+  const [showPopup, setShowPopup] = useState(false);
+  const [OTP_Value,setOTP_Valse] = useState('000000')
 
 
   return (
     <div className="body otp-page" style={{ marginTop: '100px' }}>
 
-
+      <Popup
+        show={showPopup}
+        heading={'Hello'}
+        message={'Your OTP for Login is '+OTP_Value}
+        isNotification={true}
+        onConfirmPopup={(result) => {
+          setShowPopup(false);
+        }}
+      />
        <MainHeading name="Verify Phone Number" />
        {flag==0?<div className="input-group">
         <div className="lable">Enter Phone Number</div>
@@ -314,7 +327,7 @@ useEffect(() => {
       <div className="input-group">
         <div className="text-wraper" style={{ margin: "0" }}>
           OTP sent to{" "}
-          <span className="link" onClick={unhide}>{Value}<img src={pencil}></img></span>
+          <span className="link" onClick={unhide}>{Value}<img className="pencil" src={pencil}></img></span>
         </div>
         <div className="otp-input-cont">
           {otpFields.map((value, index) => (
@@ -339,8 +352,7 @@ useEffect(() => {
       :null
 }
 {flag?  <div className="text-wraper">
-<h5>Resend OTP in {seconds}s</h5>
-    {seconds===0?<span className="link" onClick={resend}> Resend OTP</span>:null}
+    {seconds===0?<span className="link" onClick={resend}> Resend OTP</span>:<span>Resend OTP in {seconds}s</span>}
       </div>:null}
       <div style={{display:'flex',flexDirection:'column',gap:'30px',width:'100%'}}></div>
     </div>

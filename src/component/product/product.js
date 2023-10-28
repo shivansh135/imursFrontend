@@ -39,7 +39,7 @@ export default function Product() {
     <InfiniteIconMarquee info={info.bullets}/>
     <InfiniteMarquee />
     </div>
-    <MainHeading name="Customer Feedback"/>
+    <MainHeading name={info.feedBackTitle}/>
     <div className='product-feedback-cont'>
        <FeedbackNew name={info.custmerName} text={info.feedBack} img={`https://drive.google.com/uc?export=view&id=${info.customerImg}&cache-control=max-age=172800)`} city={info.custmerCity}  />
     </div>
